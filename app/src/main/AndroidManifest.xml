@@ -17,6 +17,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".HomeLanding"></activity>
+        <activity android:name=".Content"></activity>
+        <activity android:name=".Videos"></activity>
+        <activity android:name=".Flashcards"></activity>
+        <activity android:name=".Quiz"></activity>
     </application>
 
 </manifest>
