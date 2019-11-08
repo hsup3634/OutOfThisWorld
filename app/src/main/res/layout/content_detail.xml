@@ -9,11 +9,10 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/content_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nasalization"
-        android:text="Topics "
         android:textAlignment="center"
         android:textColor="#F09A3D"
         android:textSize="40sp"
@@ -24,20 +23,36 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.062" />
 
+    <ImageView
+        android:id="@+id/content_image"
+        android:layout_width="365dp"
+        android:layout_height="171dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/content_title"
+        tools:srcCompat="@tools:sample/avatars[14]" />
+
     <ScrollView
-        android:id="@+id/scrollview_main"
-        android:layout_width="349dp"
-        android:layout_height="627dp"
+        android:layout_width="365dp"
+        android:layout_height="350dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/content_image">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_topics"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            x
+            <TextView
+                android:id="@+id/content_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="TextView" />
+
+        </LinearLayout>
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
