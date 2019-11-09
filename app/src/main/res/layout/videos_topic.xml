@@ -9,7 +9,8 @@
     android:orientation="vertical">
 
 
-    <com.google.android.youtube.player.YoutubePlayerView
+    <view
+        class="com.google.android.youtube.player.YouTubePlayerView"
         android:id="@+id/video1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

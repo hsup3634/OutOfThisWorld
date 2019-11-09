@@ -31,28 +31,28 @@ public class VideoTopic extends YouTubeBaseActivity {
         Log.d(TAG, "onCreate: intent data retrieved");
 
         //add in content file
-       // Content youtubeContent = Content.getVideoById(videoID);
-        //final String video = youtubeContent.getYoutubeVideo();
+        ContentDetail youtubeContent = ContentDatabase.getVideoById(videoID);
+        final String video = youtubeContent.getYoutubeVideo();
 
 
-//
-//        ytListener = new YouTubePlayer.OnInitializedListener() {
-//            @Override
-//            public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
-//                Log.d(TAG, "Completed initialising");
-//                youTubePlayer.loadVideo(video);
-//            }
-//
-//            @Override
-//            public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
-//                Log.d(TAG, "failed initialising");
-//
-//            }
-//
-//        };
-//
-//        Log.d(TAG, "initialising");
-//        video1.initialize(YoutubeKey.getApiKey(), ytListener);
+
+        ytListener = new YouTubePlayer.OnInitializedListener() {
+            @Override
+            public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
+                Log.d(TAG, "Completed initialising");
+                youTubePlayer.loadVideo(video);
+            }
+
+            @Override
+            public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
+                Log.d(TAG, "failed initialising");
+
+            }
+
+        };
+
+        Log.d(TAG, "initialising");
+        video1.initialize(YoutubeKey.getApiKey(), ytListener);
 
     }
 
