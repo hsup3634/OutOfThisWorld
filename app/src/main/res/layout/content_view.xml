@@ -27,7 +27,7 @@
     <ScrollView
         android:id="@+id/scrollview_main"
         android:layout_width="349dp"
-        android:layout_height="627dp"
+        android:layout_height="560dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,7 +37,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_topics"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="700sp" />
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
