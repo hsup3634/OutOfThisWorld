@@ -149,7 +149,7 @@ class ContentDatabase {
         put(5, new ContentDetail(5, "bo4mEtc434w"));
     }};
 
-    public static ContentDetail getVideoById(int id) {
-        return youtubeVidMap.get(id);
+    public static ContentDetail getVideoById(int topicid) {
+        return youtubeVidMap.get(topicid);
     }
 }

@@ -22,6 +22,7 @@
         <activity android:name=".Flashcards"></activity>
         <activity android:name=".Quiz"></activity>
         <activity android:name=".VideoTopic"></activity>
+        <activity android:name=".ContentDetailActivity"></activity>
     </application>
 
 </manifest>

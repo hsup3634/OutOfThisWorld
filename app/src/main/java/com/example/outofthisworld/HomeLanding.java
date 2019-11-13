@@ -4,53 +4,60 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class HomeLanding extends AppCompatActivity {
 
+    Button content;
+    Button flashcards;
+    Button videos;
+    Button quiz;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.landing_page);
 
+        content = findViewById(R.id.content);
+        flashcards = findViewById(R.id.flashcards);
+        videos = findViewById(R.id.videos);
+        quiz = findViewById(R.id.quiz);
 
         Intent intent = getIntent();
 
+        content.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(HomeLanding.this, Content.class);
+                startActivity(intent1);
+            }
+        });
 
+        flashcards.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent(HomeLanding.this, Flashcards.class);
+                startActivity(intent2);
+            }
+        });
+
+        videos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent3 = new Intent(HomeLanding.this, Videos.class);
+                startActivity(intent3);
+            }
+        });
+
+        quiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent4 = new Intent(HomeLanding.this, Quiz.class);
+                startActivity(intent4);
+            }
+        });
     }
 
-
-    public void contentClick(View v) {
-        View view = (View) findViewById(R.id.content);
-        Context context = view.getContext();
-        Intent intent1 = new Intent(context, Content.class);
-        context.startActivity(intent1);
-
-    }
-
-    public void flashClick(View v) {
-        View view = (View) findViewById(R.id.flashcards);
-        Context context = view.getContext();
-        Intent intent2 = new Intent(context, Flashcards.class);
-        context.startActivity(intent2);
-
-    }
-
-    public void vidClick(View v) {
-        View view = (View) findViewById(R.id.videos);
-        Context context = view.getContext();
-        Intent intent3 = new Intent(context, Videos.class);
-        context.startActivity(intent3);
-
-    }
-
-    public void quizClick(View v) {
-        View view = (View) findViewById(R.id.quiz);
-        Context context = view.getContext();
-        Intent intent4 = new Intent(context, Quiz.class);
-        context.startActivity(intent4);
-
-    }
 }

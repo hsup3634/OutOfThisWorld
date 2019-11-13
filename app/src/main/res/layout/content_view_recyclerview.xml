@@ -22,7 +22,6 @@
         android:bottomLeftRadius="10dp"
         android:bottomRightRadius="10dp"
         android:fontFamily="monospace"
-        android:onClick="contentClick"
         android:radius="30dp"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"

@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.ContentViewHolder> {
+public class YoutubeAdapter extends RecyclerView.Adapter<YoutubeAdapter.YtViewHolder> {
     // class variable that holds the data that we want to adapt
     public ArrayList<ContentDetail> topicsToAdapt;
 
@@ -24,7 +24,7 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.ContentV
 
     @NonNull
     @Override
-    public ContentViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public YtViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View view =
                 LayoutInflater.from(parent.getContext())
@@ -32,12 +32,12 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.ContentV
 
         // Then create an instance of your custom ViewHolder with the View you got from inflating
         // the layout.
-        ContentViewHolder contentViewHolder = new ContentViewHolder(view);
-        return contentViewHolder;
+        YtViewHolder ytViewHolder = new YtViewHolder(view);
+        return ytViewHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ContentViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull YtViewHolder holder, int position) {
         final ContentDetail contentAtPosition = topicsToAdapt.get(position);
 
         holder.topicTextView.setText(contentAtPosition.getTitle());
@@ -48,8 +48,8 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.ContentV
             public void onClick(View view) {
                 Context context = view.getContext();
 
-                Intent intent = new Intent(context, ContentDetailActivity.class);
-                intent.putExtra("topicID", contentAtPosition.getTopicID());
+                Intent intent = new Intent(context, VideoTopic.class);
+                intent.putExtra("TopicID", contentAtPosition.getTopicID());
                 context.startActivity(intent);
             }
         });
@@ -58,24 +58,27 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.ContentV
 
 
 
+    // ViewHolder represents one item, but doesn't have data when it's first constructed.
+    // We assign the data in onBindViewHolder.
+
     @Override
     public int getItemCount() {
         return topicsToAdapt.size();
     }
 
-            public static class ContentViewHolder extends RecyclerView.ViewHolder {
-                public View view;
-                public TextView topicTextView;
+    public static class YtViewHolder extends RecyclerView.ViewHolder {
+        public View view;
+        public TextView topicTextView;
 
 
-                // This constructor is used in onCreateViewHolder
-                public ContentViewHolder(View v) {
-                    super(v);  // runs the constructor for the ViewHolder superclass
-                    view = v;
-                    topicTextView = v.findViewById(R.id.topic_title1);
-                }
-            }
+        // This constructor is used in onCreateViewHolder
+        public YtViewHolder(View v) {
+            super(v);  // runs the constructor for the ViewHolder superclass
+            view = v;
+            topicTextView = v.findViewById(R.id.topic_title1);
         }
+    }
+}
 
 
 
