@@ -25,16 +25,16 @@ public class VideoTopic extends YouTubeBaseActivity {
         Log.d(TAG, "onCreate: Begin");
 
         //resources
-        video1 = (YouTubePlayerView)findViewById(R.id.video1);
+        video1 = (YouTubePlayerView) findViewById(R.id.video1);
         //change later
         Intent intent4 = getIntent();
-        int videoID = intent4.getExtras().getInt("examplesMap");
+        int videoid = intent4.getExtras().getInt("examplesMap");
+        int topicid = intent4.getIntExtra("TopicID", 0);
         Log.d(TAG, "onCreate: intent data retrieved");
 
         //add in content file
-        ContentDetail youtubeContent = ContentDatabase.getVideoById(videoID);
+        ContentDetail youtubeContent = ContentDatabase.getVideoById(topicid);
         final String video = youtubeContent.getYoutubeVideo();
-
 
 
         ytListener = new YouTubePlayer.OnInitializedListener() {
@@ -56,12 +56,6 @@ public class VideoTopic extends YouTubeBaseActivity {
         video1.initialize(YoutubeKey.getApiKey(), ytListener);
 
     }
-
-
-
-
-
-
 
 
 }
