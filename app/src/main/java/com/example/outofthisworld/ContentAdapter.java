@@ -13,11 +13,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.ContentViewHolder> {
-    // class variable that holds the data that we want to adapt
+
     public ArrayList<ContentDetail> topicsToAdapt;
 
     public void setData(ArrayList<ContentDetail> topicsToAdapt) {
-        // This is basically a Setter that we use to give data to the adapter
+
         this.topicsToAdapt = topicsToAdapt;
 
     }
@@ -43,7 +43,7 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.ContentV
         holder.topicTextView.setText(contentAtPosition.getTitle());
 
 
-        holder.view.setOnClickListener(new View.OnClickListener() {
+        holder.topicTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Context context = view.getContext();

@@ -4,6 +4,9 @@
     <string name="clickanywhere">Click anywhere to begin!</string>
     <string name="quiztitle">Quiz</string>
 
+    <string name="correcto">Correct!!!</string>
+    <string name="incorrecto">Incorrect :(</string>
+
     <!-- Strings for the Quiz Questions are stored here -->
     <string name="BasicsQ1">1. Who first challenged the Ptolemaic system? </string>
     <string name="BasicsQ2">2. Kepler’s 1st law is known as? </string>
