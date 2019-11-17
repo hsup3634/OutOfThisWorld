@@ -43,7 +43,7 @@ public class YoutubeAdapter extends RecyclerView.Adapter<YoutubeAdapter.YtViewHo
         holder.topicTextView.setText(contentAtPosition.getTitle());
 
 
-        holder.view.setOnClickListener(new View.OnClickListener() {
+        holder.topicTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Context context = view.getContext();
