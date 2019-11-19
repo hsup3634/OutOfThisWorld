@@ -3,6 +3,7 @@ package com.example.outofthisworld;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
@@ -17,6 +18,8 @@ public class VideoTopic extends YouTubeBaseActivity {
     private static final String TAG = "VideoTopic";
     YouTubePlayerView video1;
     YouTubePlayer.OnInitializedListener ytListener;
+    private TextView vidTitle;
+    private TextView vidDesc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +29,9 @@ public class VideoTopic extends YouTubeBaseActivity {
 
         //resources
         video1 = (YouTubePlayerView) findViewById(R.id.video1);
+        vidTitle = findViewById(R.id.vidTitle);
+        vidDesc = findViewById(R.id.vidDesc);
+
         //change later
         Intent intent4 = getIntent();
         int videoid = intent4.getExtras().getInt("examplesMap");
@@ -35,6 +41,12 @@ public class VideoTopic extends YouTubeBaseActivity {
         //add in content file
         ContentDetail youtubeContent = ContentDatabase.getVideoById(topicid);
         final String video = youtubeContent.getYoutubeVideo();
+        final String vidtitle = youtubeContent.getYtTitle();
+        final String viddesc = youtubeContent.getYtDescription();
+
+
+
+
 
 
         ytListener = new YouTubePlayer.OnInitializedListener() {
@@ -42,6 +54,8 @@ public class VideoTopic extends YouTubeBaseActivity {
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
                 Log.d(TAG, "Completed initialising");
                 youTubePlayer.loadVideo(video);
+                vidTitle.setText(vidtitle);
+                vidDesc.setText(viddesc);
             }
 
             @Override

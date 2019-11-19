@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,11 +17,19 @@ import java.util.Random;
 
 public class TopicSelectorGame extends AppCompatActivity {
 
+
     //declerations
     public static final Random randomTopic = new Random();
     private View game;
     private ImageView telescope;
     private int previousAngle = -1;
+    private TextView topic1;
+    private TextView topic2;
+    private TextView topic3;
+    private TextView topic4;
+    private TextView topic5;
+    private TextView topic6;
+
 
     //code to spin the telescope
     @Override
@@ -38,6 +47,28 @@ public class TopicSelectorGame extends AppCompatActivity {
             }
         });
         Toast.makeText(this, "Touch the telescope to help you decide which topic to learn first!", Toast.LENGTH_SHORT).show();
+
+
+        topic1 = findViewById(R.id.topic1Text);
+        topic2 = findViewById(R.id.topic2Text);
+        topic3 = findViewById(R.id.topic3Text);
+        topic4 = findViewById(R.id.topic4Text);
+        topic5 = findViewById(R.id.topic5Text);
+        topic6 = findViewById(R.id.topic6Text);
+
+
+        ContentAdapter contentAdapter = new ContentAdapter();
+
+
+//todo fix adapter stuff here so it links to the correct topic - may have to create a new adapter
+//        topic1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent t1 = new Intent(TopicSelectorGame.this, ContentDetailActivity.class);
+//                startActivity(t1);
+//            }
+//        });
+
     }
 
     private void spinTheTelescope() {

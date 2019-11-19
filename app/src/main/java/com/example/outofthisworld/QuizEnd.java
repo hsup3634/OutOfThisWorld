@@ -52,8 +52,8 @@ public class QuizEnd extends AppCompatActivity {
         double quizResult = (result * 100.0);
         String quizMark;
 
-        if (result < 50) {
-            quizMark = "MISSION FAILED :( THE ROCKET CRASHED";
+        if (quizResult < 50) {
+            quizMark = "MISSION FAILED! THE ROCKET CRASHED";
         } else {
                quizMark = "MISSION SUCCESSFUL! THE ROCKET LANDED SAFELY ON MARS";
             }

@@ -19,6 +19,7 @@ public class ContentDetailActivity extends AppCompatActivity {
         setContentView(R.layout.content_detail);
 
         Intent intent = getIntent();
+        Intent t1 = getIntent();
         int topicID = intent.getIntExtra("topicID", 0);
         ContentDetail contentDetail = ContentDatabase.getTopicById(topicID);
 

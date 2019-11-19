@@ -2,6 +2,9 @@ package com.example.outofthisworld;
 
 public class ContentDetail {
 
+    private String ytTitle;
+    private String ytDescription;
+
     // unique identifier of a Topic
     private int topicID;
     // Name of the Topic
@@ -21,9 +24,27 @@ public class ContentDetail {
         this.imageDrawableId = imageDrawableId;
     }
 
-    public ContentDetail(int topicID, String youtubeVideo) {
+    public String getYtTitle() {
+        return ytTitle;
+    }
+
+    public void setYtTitle(String ytTitle) {
+        this.ytTitle = ytTitle;
+    }
+
+    public String getYtDescription() {
+        return ytDescription;
+    }
+
+    public void setYtDescription(String ytDescription) {
+        this.ytDescription = ytDescription;
+    }
+
+    public ContentDetail(int topicID, String youtubeVideo, String ytTitle, String ytDescription) {
         this.topicID = topicID;
         this.youtubeVideo = youtubeVideo;
+        this.ytTitle = ytTitle;
+        this.ytDescription = ytDescription;
     }
 
 

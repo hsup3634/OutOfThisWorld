@@ -30,32 +30,35 @@
         class="com.google.android.youtube.player.YouTubePlayerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/videotitle"
-        app:layout_constraintVertical_bias="0.279"
+        app:layout_constraintTop_toBottomOf="@+id/vidTitle"
+        app:layout_constraintVertical_bias="0.178"
         tools:layout_editor_absoluteX="0dp" />
 
     <TextView
-        android:id="@+id/videotitle"
-        android:layout_width="wrap_content"
+        android:id="@+id/vidTitle"
+        android:layout_width="226dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="68dp"
         android:layout_marginEnd="60dp"
         android:fontFamily="@font/nasalization"
         android:text="@string/vidtitle"
-        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/videoTitle2" />
 
     <TextView
-        android:id="@+id/videodescription"
-        android:layout_width="wrap_content"
+        android:id="@+id/vidDesc"
+        android:layout_width="255dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="@string/Videodescription"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/video1" />

@@ -141,13 +141,15 @@ class ContentDatabase {
     }
 
     public static HashMap<Integer, ContentDetail> youtubeVidMap = new HashMap(){{
-        put(1, new ContentDetail(0, "6TGCPXhMLtU"));
-        put(2, new ContentDetail(1, "TRAbZxQHlVw"));
-        put(3, new ContentDetail(2, "iwlMmJs1f5o"));
-        put(4, new ContentDetail(3, "tj_QPnO8vpQ"));
-        put(5, new ContentDetail(4, "Op3AYaJc0Xw"));
-        put(6, new ContentDetail(5, "bo4mEtc434w"));
+        put(1, new ContentDetail(0, "6TGCPXhMLtU", "Understanding Kepler's Three Laws", "In this video you will be introduced to Kepler's 3 laws and see how they are relevant to orbiting objects"));
+        put(2, new ContentDetail(1, "TRAbZxQHlVw", "Astronomy Crash Course: Gravity", "This video discusses gravity as a force, the different types of orbits, escape velocity and weightless mass"));
+        put(3, new ContentDetail(2, "iwlMmJs1f5o", "Stellar Parallax and Measuring Distance", "Have you ever travelled down a road in a car and looked at mountains or hills in the distance? If you have, you’ve probably noticed that while nearby trees quickly fly past the window, the mountains move much slower, and in the far distance the Moon and stars don’t seem to move at all. This is because of a phenomenon called \"parallax\""));
+        put(4, new ContentDetail(3, "tj_QPnO8vpQ", "Astronomy Crash Course: The Milky Way", "This video discusses our galactic neighbour: The Milky Way. It’s a disk galaxy, a collection of dust, gas, and hundreds of billions of stars, with the Sun located about halfway out from the center."));
+        put(5, new ContentDetail(4, "Op3AYaJc0Xw", "Light seconds, light years, light centuries: How to measure extreme distances", "When we look at the sky, we have a flat, two-dimensional view. So how do astronomers figure the distances of stars and galaxies from Earth? Yuan-Sen Ting shows us how trigonometric parallaxes, standard candles and more help us determine the distance of objects several billion light years away from Earth."));
+        put(6, new ContentDetail(5, "bo4mEtc434w", "Life in the Universe", "Does life exist anywhere else in the universe? And how did it get started? Scientists are seeking the answers in the cosmos, our solar system and right here on planet Earth."));
     }};
+
+
 
     public static ContentDetail getVideoById(int topicid) {
         return youtubeVidMap.get(topicid);
