@@ -54,7 +54,7 @@ public class HomeLanding extends AppCompatActivity {
         quiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent4 = new Intent(HomeLanding.this, Quiz.class);
+                Intent intent4 = new Intent(HomeLanding.this, QuizInitialiser.class);
                 startActivity(intent4);
             }
         });

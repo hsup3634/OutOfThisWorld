@@ -12,13 +12,12 @@
     <string name="BasicsQ2">2. Kepler’s 1st law is known as? </string>
     <string name="BasicsQ3">3. Kepler’s first law states that the orbits of the planets are oval in shape or..?</string>
     <string name="BasicsQ4">4. If a planet is further away from the sun than another planet, it takes______ to orbit the sun once </string>
-    <string name="BasicsQ5">5. Kepler’s second law is known as? </string>
+
 
     <string name="NewtonQ1">1. What law did Newton put forward? </string>
     <string name="NewtonQ2">2. The moon and other satellites rotate around the earth. Identify the force that keeps these satellites in orbit. </string>
     <string name="NewtonQ3">3. What two main factors keep a planet in motion? </string>
-    <string name="NewtonQ4">4. Objects cannot move without..?</string>
-    <string name="NewtonQ5">5. The force of gravity on an object is called what? </string>
+    <string name="NewtonQ4">4. The force of gravity on an object is called what? </string>
 
     <string name="StellarQ1">1. What is parallax? </string>
     <string name="StellarQ2">2. How far away is the star 61 Cygni? </string>
@@ -30,7 +29,7 @@
     <string name="MilkyQ2">2. What is the closest galaxy to the Milky way? </string>
     <string name="MilkyQ3">3. What type of galaxy is the Milky Way? </string>
     <string name="MilkyQ4">4. Who in 1783 discovered the motion of the solar system between the neighbouring stars? </string>
-    <string name="MilkyQ5">5. What is the diameter of the Milky Way? </string>
+
 
     <string name="ScaleQ1">1. The speed of light is? </string>
     <string name="ScaleQ2">2. The nearest star is about… </string>

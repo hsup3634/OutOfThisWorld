@@ -32,7 +32,8 @@ public class QuizInitialiser extends AppCompatActivity {
             new Questions(R.string.BasicsQ2, "The law of orbits", "The law of periods", "The law of gravity"),
             new Questions(R.string.BasicsQ3, "Ellipses", "Perfect circles", "Triangles"),
             new Questions(R.string.BasicsQ4, "More time", "Less time", "The same amount of time"),
-            new Questions(R.string.BasicsQ5, "The law of areas", "The law of orbits", "The law of gravity"),
+          //  new Questions("5. "),
+            //new Questions("6. ")
 
     };
 
@@ -43,6 +44,8 @@ public class QuizInitialiser extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quiz_page);
+
+        Intent intent4 = getIntent();
 
         button_next = findViewById(R.id.button_next);
         question_text = findViewById(R.id.question_text);
@@ -58,8 +61,9 @@ public class QuizInitialiser extends AppCompatActivity {
             public void onClick(View v) {
                 checkAnswer(quizQuestions[questionCurrent]);
                 if(questionCurrent == (quizQuestions.length - 1)) {
-                    //TODO change homelanding to results class
-                    Intent intent = new Intent(QuizInitialiser.this, HomeLanding.class);
+
+                    //TODO change contentdetailactivity to results class
+                    Intent intent = new Intent(QuizInitialiser.this, ContentDetailActivity.class);
                     intent.putExtra("CORRECT!", correct);
                     intent.putExtra("INCORRECT!", incorrect);
 

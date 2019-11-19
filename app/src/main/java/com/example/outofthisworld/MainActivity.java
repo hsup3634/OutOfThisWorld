@@ -17,17 +17,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-    }
-
-    public void homeClick (View v) {
-        View view = (View) findViewById(R.id.home);
-        Context context = view.getContext();
-        Intent intent = new Intent(context, HomeLanding.class);
-        context.startActivity(intent);
+        home = findViewById(R.id.home);
 
 
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Intent intent1 = new Intent(MainActivity.this, HomeLanding.class);
+                startActivity(intent1);
+            }
+
+        });
 
 
-    }
+}
+
 }

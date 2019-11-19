@@ -23,6 +23,8 @@
         <activity android:name=".Quiz"></activity>
         <activity android:name=".VideoTopic"></activity>
         <activity android:name=".ContentDetailActivity"></activity>
+        <activity android:name=".QuizInitialiser"></activity>
+
     </application>
 
     <uses-permission android:name="android.permission.INTERNET"/>
