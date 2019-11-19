@@ -2,22 +2,21 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearLayout4"
+    android:id="@+id/linearLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bgstars"
-    android:orientation="vertical">
-
+    android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/videoTitle2"
-        android:layout_width="179dp"
+        android:id="@+id/ResultsTitle"
+        android:layout_width="match_parent"
         android:layout_height="53dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/nasalization"
-        android:text="Videos"
+        android:text="Results"
         android:textAlignment="center"
         android:textColor="#F09A3D"
         android:textSize="40sp"
@@ -25,40 +24,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <view
-        android:id="@+id/video1"
-        class="com.google.android.youtube.player.YouTubePlayerView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/videotitle"
-        app:layout_constraintVertical_bias="0.279"
-        tools:layout_editor_absoluteX="0dp" />
-
     <TextView
-        android:id="@+id/videotitle"
-        android:layout_width="wrap_content"
+        android:id="@+id/resultBox"
+        android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="60dp"
-        android:fontFamily="@font/nasalization"
-        android:text="@string/vidtitle"
-        android:textSize="20sp"
+        android:background="#D66C44"
+        android:text="Number of questions correct"
+        android:textAlignment="center"
+        android:textSize="72sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/videoTitle2" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.437" />
 
     <TextView
-        android:id="@+id/videodescription"
-        android:layout_width="wrap_content"
+        android:id="@+id/missionStatus"
+        android:layout_width="212dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="@string/Videodescription"
+        android:fontFamily="@font/nasalization"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/video1" />
-
+        app:layout_constraintTop_toTopOf="@+id/ResultsTitle"
+        app:layout_constraintVertical_bias="0.924" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

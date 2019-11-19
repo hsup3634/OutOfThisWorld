@@ -32,8 +32,28 @@ public class QuizInitialiser extends AppCompatActivity {
             new Questions(R.string.BasicsQ2, "The law of orbits", "The law of periods", "The law of gravity"),
             new Questions(R.string.BasicsQ3, "Ellipses", "Perfect circles", "Triangles"),
             new Questions(R.string.BasicsQ4, "More time", "Less time", "The same amount of time"),
-          //  new Questions("5. "),
-            //new Questions("6. ")
+            new Questions(R.string.NewtonQ1, "Law of gravitation", "Law of planetary motion", "Law of thermodynamics"),
+            new Questions(R.string.NewtonQ2, "Gravity", "Friction", "Electromagnetic Force"),
+            new Questions(R.string.NewtonQ3, "Gravity and Inertia", "Weight and Mass", "Force and Motion"),
+            new Questions(R.string.NewtonQ4, "Weight", "Pressure", "Mass"),
+            new Questions(R.string.StellarQ1, "Angle p-the measure of the distance to a nearby star", "Angle p-the measure of the distance to the sun", "Angle p-the angle of inclination of the earth"),
+            new Questions(R.string.StellarQ2, "4.3 light years", "9.8 light years", "12 light years"),
+            new Questions(R.string.StellarQ3, "We can look at two different stars from the earth", "We can see a star from two different places on earth", "It does not relate"),
+            new Questions(R.string.MilkyQ1, "200-400 billion", "100,000", "600-700 million"),
+            new Questions(R.string.MilkyQ2, "Andromeda", "Bode’s galaxy", "Comet Galaxy"),
+            new Questions(R.string.MilkyQ3, "Spiral", "Lenticular", "Irregular"),
+            new Questions(R.string.MilkyQ4, "Johannes Kepler", "William Herschel", "Simon Marius"),
+            new Questions(R.string.ScaleQ1, "300,000km/s", "2 light years", "60,000 au"),
+            new Questions(R.string.ScaleQ2, "4.3. light years away", "1 light year away", "6 light years away"),
+            new Questions(R.string.ScaleQ3, "Larger than that of Jupiter", "Smaller than that of Jupiter", "About the same as that of Jupiter"),
+            new Questions(R.string.ScaleQ4, "1 AU", "50 million km away", "300,000 km away"),
+            new Questions(R.string.LifeQ1, "50,000 years", "10,000 years", "60,000 years"),
+            new Questions(R.string.LifeQ2, "The product of the number of habitable planets and the probability of life’s origin", "The sum of planets that have water on them", "One. Only our earth"),
+            new Questions(R.string.LifeQ3, "All of the given answers", "How they formed and how they evolve", "Whether they are likely to be habitable"),
+            new Questions(R.string.LifeQ4, "The study of life in the universe", "The scientific study of the large-scale properties of the universe as a whole", "Neither of the given answers"),
+
+
+
 
     };
 
@@ -63,9 +83,9 @@ public class QuizInitialiser extends AppCompatActivity {
                 if(questionCurrent == (quizQuestions.length - 1)) {
 
                     //TODO change contentdetailactivity to results class
-                    Intent intent = new Intent(QuizInitialiser.this, ContentDetailActivity.class);
-                    intent.putExtra("CORRECT!", correct);
-                    intent.putExtra("INCORRECT!", incorrect);
+                    Intent intent = new Intent(QuizInitialiser.this, QuizEnd.class);
+                    intent.putExtra("correct", correct);
+                    intent.putExtra("incorrect", incorrect);
 
                     startActivity(intent);
 

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/emptybgstarts"
+    tools:context="com.example.outofthisworld.TopicSelectorGame"
+    android:id="@+id/gamebackground">
+
+    <ImageView
+        android:id="@+id/venus"
+        android:layout_width="144dp"
+        android:layout_height="136dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="147dp"
+        android:layout_marginBottom="61dp"
+        app:srcCompat="@drawable/venus" />
+
+    <ImageView
+        android:id="@+id/telescope"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/telescope"
+        android:layout_centerInParent="true">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/jupiter"
+        android:layout_width="182dp"
+        android:layout_height="193dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="538dp"
+        app:srcCompat="@drawable/jupiter" />
+
+    <ImageView
+        android:id="@+id/earth"
+        android:layout_width="103dp"
+        android:layout_height="96dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="419dp"
+        app:srcCompat="@drawable/earth" />
+
+    <ImageView
+        android:id="@+id/mars"
+        android:layout_width="139dp"
+        android:layout_height="135dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="190dp"
+        app:srcCompat="@drawable/mars" />
+
+    <ImageView
+        android:id="@+id/mercury"
+        android:layout_width="121dp"
+        android:layout_height="121dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="281dp"
+        android:layout_marginBottom="422dp"
+        app:srcCompat="@drawable/mercury" />
+
+    <ImageView
+        android:id="@+id/neptune"
+        android:layout_width="121dp"
+        android:layout_height="121dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="278dp"
+        android:layout_marginBottom="243dp"
+        app:srcCompat="@drawable/neptune" />
+
+
+</RelativeLayout>

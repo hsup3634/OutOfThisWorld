@@ -2,6 +2,8 @@ package com.example.outofthisworld;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -11,12 +13,24 @@ public class Content extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
+    private Button startGame;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_view);
+
+        startGame = findViewById(R.id.startGameButton);
+
+        startGame.setOnClickListener(new View.OnClickListener() {
+                                         @Override
+                                         public void onClick(View v) {
+                                             Intent gameIntent = new Intent(Content.this, TopicSelectorGame.class);
+                                             startActivity(gameIntent);
+                                         }
+                                     }
+        );
 
         recyclerView = findViewById(R.id.rv_topics);
         layoutManager = new LinearLayoutManager(this);
@@ -28,5 +42,8 @@ public class Content extends AppCompatActivity {
         recyclerView.setAdapter(contentAdapter);
 
         Intent intent1 = getIntent();
+
+
+
     }
 }

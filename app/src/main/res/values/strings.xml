@@ -14,34 +14,35 @@
     <string name="BasicsQ4">4. If a planet is further away from the sun than another planet, it takes______ to orbit the sun once </string>
 
 
-    <string name="NewtonQ1">1. What law did Newton put forward? </string>
-    <string name="NewtonQ2">2. The moon and other satellites rotate around the earth. Identify the force that keeps these satellites in orbit. </string>
-    <string name="NewtonQ3">3. What two main factors keep a planet in motion? </string>
-    <string name="NewtonQ4">4. The force of gravity on an object is called what? </string>
+    <string name="NewtonQ1">5. What law did Newton put forward? </string>
+    <string name="NewtonQ2">6. The moon and other satellites rotate around the earth. Identify the force that keeps these satellites in orbit. </string>
+    <string name="NewtonQ3">7. What two main factors keep a planet in motion? </string>
+    <string name="NewtonQ4">8. The force of gravity on an object is called what? </string>
 
-    <string name="StellarQ1">1. What is parallax? </string>
-    <string name="StellarQ2">2. How far away is the star 61 Cygni? </string>
-    <string name="StellarQ3">3. How far away is Alpha Centauri from our sun? </string>
-    <string name="StellarQ4">4. Your two eyes can be part of an example of parallax. How does that relate to the Earth in stellar parallax? </string>
-    <string name="StellarQ5">5. Which of the following is true? </string>
+    <string name="StellarQ1">9. What is parallax? </string>
+    <string name="StellarQ2">10. How far away is Alpha Centauri from our sun? </string>
+    <string name="StellarQ3">11. Your two eyes can be part of an example of parallax. How does that relate to the Earth in stellar parallax? </string>
+    <string name="StellarQ4">12. Which of the following is true? </string>
 
-    <string name="MilkyQ1">1. How many stars are in the milky way? </string>
-    <string name="MilkyQ2">2. What is the closest galaxy to the Milky way? </string>
-    <string name="MilkyQ3">3. What type of galaxy is the Milky Way? </string>
-    <string name="MilkyQ4">4. Who in 1783 discovered the motion of the solar system between the neighbouring stars? </string>
+    <string name="MilkyQ1">13. How many stars are in the milky way? </string>
+    <string name="MilkyQ2">14. What is the closest galaxy to the Milky way? </string>
+    <string name="MilkyQ3">15. What type of galaxy is the Milky Way? </string>
+    <string name="MilkyQ4">16. Who in 1783 discovered the motion of the solar system between the neighbouring stars? </string>
 
 
-    <string name="ScaleQ1">1. The speed of light is? </string>
-    <string name="ScaleQ2">2. The nearest star is about… </string>
-    <string name="ScaleQ3">3. The orbit of Neptune is? </string>
-    <string name="ScaleQ4">4. The distance from the sun to the earth is? </string>
-    <string name="ScaleQ5">5. The Milky way contains about ______ stars? </string>
+    <string name="ScaleQ1">17. The speed of light is? </string>
+    <string name="ScaleQ2">18. The nearest star is about… </string>
+    <string name="ScaleQ3">19. The orbit of Neptune is? </string>
+    <string name="ScaleQ4">20. The distance from the sun to the earth is? </string>
 
-    <string name="LifeQ1">1. Modern humans have only been around for? </string>
-    <string name="LifeQ2">2. The number of planets with life is thought to be_____? </string>
-    <string name="LifeQ3">3. To find the number of habitable planets, we need to understand…? </string>
-    <string name="LifeQ4">4. Life has existed for about…? </string>
-    <string name="LifeQ5">5. What is Astrobiology? </string>
+
+    <string name="LifeQ1">21. Modern humans have only been around for? </string>
+    <string name="LifeQ2">22. The number of planets with life is thought to be_____? </string>
+    <string name="LifeQ3">23. To find the number of habitable planets, we need to understand…? </string>
+    <string name="LifeQ4">24. What is Astrobiology? </string>
+    <string name="vidtitle">Video Title</string>
+    <string name="Videodescription">Video Description</string>
+    <string name="gameInstructors">Click to play random topic game!</string>
 
 </resources>
 
