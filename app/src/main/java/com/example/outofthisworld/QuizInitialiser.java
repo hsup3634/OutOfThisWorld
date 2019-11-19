@@ -65,7 +65,7 @@ public class QuizInitialiser extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quiz_page);
 
-        Intent intent4 = getIntent();
+        Intent startQuizIntent = getIntent();
 
         button_next = findViewById(R.id.button_next);
         question_text = findViewById(R.id.question_text);
