@@ -26,6 +26,7 @@ public class HomeLanding extends AppCompatActivity {
         quiz = findViewById(R.id.quiz);
 
         Intent intent = getIntent();
+        Intent homeIntent = getIntent();
 
         content.setOnClickListener(new View.OnClickListener() {
             @Override

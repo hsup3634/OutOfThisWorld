@@ -19,6 +19,7 @@ public class QuizInitialiser extends AppCompatActivity {
 
     Button button_next;
     TextView question_text;
+    Button homeBtn;
 
     int questionCurrent = 0;
 
@@ -27,7 +28,9 @@ public class QuizInitialiser extends AppCompatActivity {
     RadioButton answer2;
     RadioButton answer3;
 
-    Questions[] quizQuestions = new Questions[] {
+    //storing the questions in an array with the first answer being correct and subsquent being incorrect
+    //utilised the strings.xml files as done in: https://github.com/elisavetTriant/WebDevQuiz
+    Questions[] quizQuestions = new Questions[]{
             new Questions(R.string.BasicsQ1, "Copernicus", "Ptolemy", "Kepler"),
             new Questions(R.string.BasicsQ2, "The law of orbits", "The law of periods", "The law of gravity"),
             new Questions(R.string.BasicsQ3, "Ellipses", "Perfect circles", "Triangles"),
@@ -53,12 +56,12 @@ public class QuizInitialiser extends AppCompatActivity {
             new Questions(R.string.LifeQ4, "The study of life in the universe", "The scientific study of the large-scale properties of the universe as a whole", "Neither of the given answers"),
 
 
-
-
     };
 
+    //created 2 arraylists, one to store the correct answers and one to store the incorrect answers
     ArrayList<Questions> correct = new ArrayList<>();
     ArrayList<Questions> incorrect = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,9 +70,11 @@ public class QuizInitialiser extends AppCompatActivity {
 
         Intent startQuizIntent = getIntent();
 
+        //find UI elements
         button_next = findViewById(R.id.button_next);
         question_text = findViewById(R.id.question_text);
         quizRadioGroup = findViewById(R.id.quizRadioGroup);
+        homeBtn = findViewById(R.id.HomeBtn);
         answer1 = findViewById(R.id.answer1);
         answer2 = findViewById(R.id.answer2);
         answer3 = findViewById(R.id.answer3);
@@ -80,20 +85,28 @@ public class QuizInitialiser extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 checkAnswer(quizQuestions[questionCurrent]);
-                if(questionCurrent == (quizQuestions.length - 1)) {
+                if (questionCurrent == (quizQuestions.length - 1)) {
 
-                    //TODO change contentdetailactivity to results class
                     Intent intent = new Intent(QuizInitialiser.this, QuizEnd.class);
                     intent.putExtra("correct", correct);
                     intent.putExtra("incorrect", incorrect);
 
                     startActivity(intent);
 
-                } else{
+                } else {
                     questionCurrent++;
                     repeatQuestions();
                     button_next.setVisibility(View.INVISIBLE);
                 }
+            }
+        });
+
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent homeIntent = new Intent(QuizInitialiser.this, HomeLanding.class);
+                startActivity(homeIntent);
+
             }
         });
 
@@ -108,44 +121,27 @@ public class QuizInitialiser extends AppCompatActivity {
 
     }
 
+//this code below clears the question and radio buttons once the user clicks the next button
     public void repeatQuestions() {
         button_next.setVisibility(View.INVISIBLE);
         quizRadioGroup.clearCheck();
+
         question_text.setText(quizQuestions[questionCurrent].getId());
-       // fixVisible(quizQuestions[questionCurrent]);
+        //sets the answers as visible and then populates it with the question number that the user is on and assigns the radio button texts with the appropriate answers
         fixQVisible(quizQuestions[questionCurrent]);
         assignRadioAnswers(quizQuestions[questionCurrent]);
     }
 
     public void fixQVisible(Questions questions) {
+        //this method just sets the visibilities of the radio button text to visible so that when the user moves to the next question they can see the appropriate answers
         answer1.setVisibility(View.VISIBLE);
         answer2.setVisibility(View.VISIBLE);
         answer3.setVisibility(View.VISIBLE);
 
     }
 
-    public void assignRadioAnswers(Questions questions) {
-        ArrayList<String> questionOps = new ArrayList<>(Arrays.asList(
-           questions.getAns(),
-           questions.getInc1(),
-           questions.getInc2()
-        ));
-
-        int numberRandom = Math.abs(new Random().nextInt(3));
-        answer1.setText(questionOps.get(numberRandom));
-        questionOps.remove(numberRandom);
-
-        numberRandom = Math.abs(new Random().nextInt(2));
-        answer2.setText(questionOps.get(numberRandom));
-        questionOps.remove(numberRandom);
-
-       // numberRandom = Math.abs(new Random().nextInt(0));
-        answer3.setText(questionOps.get(0));
-        //questionOps.remove(numberRandom);
-
-
-    }
-
+//Quiz code derived from the quiz tutorial: https://www.youtube.com/watch?v=AH3SQOMEgZk
+    //note: we changed our code to radio buttons instead of the buttons used in the video
     public void checkAnswer(Questions questions) {
         String ans;
         String correctAns = questions.getAns();
@@ -166,8 +162,9 @@ public class QuizInitialiser extends AppCompatActivity {
     }
 
 
-    public RadioButton correctRadioAns (String correct) {
-        if(answer1.getText() == correct) {
+    //Radio button code derived from: https://www.mkyong.com/android/android-radio-buttons-example/
+    public RadioButton correctRadioAns(String correct) {
+        if (answer1.getText() == correct) {
             return answer1;
         } else if (answer3.getText() == correct) {
             return answer3;
@@ -178,13 +175,32 @@ public class QuizInitialiser extends AppCompatActivity {
 
     public String whichClicked() {
         if (answer1.isChecked())
-        return answer1.getText().toString();
+            return answer1.getText().toString();
         else if (answer2.isChecked())
             return (answer2.getText().toString());
         else return answer3.getText().toString();
     }
 
 
+    public void assignRadioAnswers(Questions questions) {
+        ArrayList<String> questionOps = new ArrayList<>(Arrays.asList(
+                questions.getAns(),
+                questions.getInc1(),
+                questions.getInc2()
+        ));
 
+        int numberRandom = Math.abs(new Random().nextInt(3));
+        answer1.setText(questionOps.get(numberRandom));
+        questionOps.remove(numberRandom);
+
+        numberRandom = Math.abs(new Random().nextInt(2));
+        answer2.setText(questionOps.get(numberRandom));
+        questionOps.remove(numberRandom);
+
+        answer3.setText(questionOps.get(0));
+
+
+
+    }
 
 }

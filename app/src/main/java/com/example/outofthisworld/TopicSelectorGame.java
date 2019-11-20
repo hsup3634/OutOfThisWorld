@@ -48,13 +48,13 @@ public class TopicSelectorGame extends AppCompatActivity {
         });
         Toast.makeText(this, "Touch the telescope to help you decide which topic to learn first!", Toast.LENGTH_SHORT).show();
 
-
-        topic1 = findViewById(R.id.topic1Text);
-        topic2 = findViewById(R.id.topic2Text);
-        topic3 = findViewById(R.id.topic3Text);
-        topic4 = findViewById(R.id.topic4Text);
-        topic5 = findViewById(R.id.topic5Text);
-        topic6 = findViewById(R.id.topic6Text);
+//
+//        topic1 = findViewById(R.id.topic);
+//        topic2 = findViewById(R.id.topic2Text);
+//        topic3 = findViewById(R.id.topic3Text);
+//        topic4 = findViewById(R.id.topic4Text);
+//        topic5 = findViewById(R.id.topic5Text);
+//        topic6 = findViewById(R.id.topic6Text);
 
 
         ContentAdapter contentAdapter = new ContentAdapter();
