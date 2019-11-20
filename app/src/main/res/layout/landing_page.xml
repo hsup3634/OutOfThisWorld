@@ -49,7 +49,7 @@
         android:bottomRightRadius="10dp"
         android:fontFamily="monospace"
         android:radius="30dp"
-        android:text="FLASHCARDS"
+        android:text="FUN FACTS"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="30sp"

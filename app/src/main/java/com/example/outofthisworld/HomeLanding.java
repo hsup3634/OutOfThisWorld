@@ -39,7 +39,7 @@ public class HomeLanding extends AppCompatActivity {
         flashcards.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent2 = new Intent(HomeLanding.this, Flashcards.class);
+                Intent intent2 = new Intent(HomeLanding.this, FunFacts.class);
                 startActivity(intent2);
             }
         });

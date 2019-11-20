@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgstars"
+    tools:context=".FunFacts">
+
+    <TextView
+        android:layout_width="318dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginEnd="42dp"
+        android:fontFamily="@font/nasalization"
+        android:text="@string/did_you_know"
+        android:textAlignment="center"
+        android:textColor="#F09A3D"
+        android:textSize="40sp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativelayout"
+        android:layout_width="wrap_content"
+        android:layout_height="403dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="224dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="219dp"
+        android:background="#FF8F00">
+
+        <TextView
+            android:id="@+id/factTextView"
+            android:layout_width="329dp"
+            android:layout_height="142dp"
+            android:layout_marginStart="12dp"
+            android:text='"Supernovae are rare in our Galaxy, there were only few visible in the last millennium. The Crab nebula is a supernova remnant."'
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.498" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/showFactButton"
+        android:layout_width="249dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="93dp"
+        android:layout_marginEnd="69dp"
+        android:layout_marginBottom="40dp"
+        android:background="#FF8F00"
+        android:text="@string/next_fun_fact"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>

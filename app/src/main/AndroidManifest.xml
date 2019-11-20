@@ -27,6 +27,7 @@
         <activity android:name=".QuizEnd"></activity>
         <activity android:name=".QuizStory"></activity>
         <activity android:name=".TopicSelectorGame"></activity>
+        <activity android:name=".FunFacts"></activity>
 
     </application>
 

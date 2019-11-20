@@ -11,12 +11,12 @@
 
     <ImageView
         android:id="@+id/venus"
-        android:layout_width="144dp"
-        android:layout_height="136dp"
+        android:layout_width="173dp"
+        android:layout_height="157dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="147dp"
-        android:layout_marginBottom="61dp"
+        android:layout_marginEnd="179dp"
+        android:layout_marginBottom="39dp"
         app:srcCompat="@drawable/venus" />
 
     <ImageView
@@ -103,11 +103,11 @@
 
     <TextView
         android:id="@+id/topic2"
-        android:layout_width="wrap_content"
+        android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/mercury"
         android:layout_marginEnd="-307dp"
-        android:layout_marginBottom="-153dp"
+        android:layout_marginBottom="-164dp"
         android:layout_toStartOf="@+id/jupiter"
         android:text="@string/Topic2"
         android:textStyle="bold" />
@@ -129,8 +129,8 @@
         android:layout_height="35dp"
         android:layout_above="@+id/earth"
         android:layout_alignEnd="@+id/earth"
-        android:layout_marginEnd="208dp"
-        android:layout_marginBottom="-510dp"
+        android:layout_marginEnd="203dp"
+        android:layout_marginBottom="-501dp"
         android:text="@string/Topic4"
         android:textStyle="bold" />
 

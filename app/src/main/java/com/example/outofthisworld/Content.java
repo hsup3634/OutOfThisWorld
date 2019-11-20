@@ -3,6 +3,8 @@ package com.example.outofthisworld;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -43,6 +45,14 @@ public class Content extends AppCompatActivity {
 
         Intent intent1 = getIntent();
 
+        //code to flash game button for UI
+        Button gameButton = findViewById(R.id.startGameButton);
+        Animation buttonFlash = new AlphaAnimation(0.0f, 1.0f);
+        buttonFlash.setDuration(200);
+        buttonFlash.setStartOffset(5);
+        buttonFlash.setRepeatMode(Animation.ABSOLUTE);
+        buttonFlash.setRepeatCount(10);
+        gameButton.startAnimation(buttonFlash);
 
 
     }

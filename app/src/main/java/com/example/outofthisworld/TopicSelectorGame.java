@@ -46,7 +46,7 @@ public class TopicSelectorGame extends AppCompatActivity {
                 spinTheTelescope();
             }
         });
-        Toast.makeText(this, "Touch the telescope to help you decide which topic to learn first!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Touch the telescope to help you decide which topic to learn first!", Toast.LENGTH_LONG).show();
 
 //
 //        topic1 = findViewById(R.id.topic);

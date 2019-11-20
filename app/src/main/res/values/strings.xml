@@ -42,7 +42,7 @@
     <string name="LifeQ4">24. What is Astrobiology? </string>
     <string name="vidtitle">Video Title</string>
     <string name="Videodescription">Video Description</string>
-    <string name="gameInstructors">Click to play random topic game!</string>
+    <string name="gameInstructors">Click here to play random topic game!</string>
 
     <string name="Topic1">The Basics of Astronomy </string>
     <string name="Topic2">Newton and Gravitation</string>
@@ -51,6 +51,11 @@
     <string name="Topic5">Scale of the Universe</string>
     <string name="Topic6">Introduction to Astrobiology</string>
     <string name="oops">Oops! You\'ve landed on a black hole! Spin again!</string>
+
+
+    <string name="next_fun_fact">Next Fun Fact!</string>
+    <string name="ants_stretch_when_they_wake_up_in_the_morning">Ants stretch when they wake up in the morning.</string>
+    <string name="did_you_know">Did you know?</string>
 
 </resources>
 
