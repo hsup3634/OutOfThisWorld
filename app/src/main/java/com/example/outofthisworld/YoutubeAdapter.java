@@ -12,12 +12,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+//this class is very similar to the content adapter class - same principles used to populate recycler view with the topic names
+
 public class YoutubeAdapter extends RecyclerView.Adapter<YoutubeAdapter.YtViewHolder> {
-    // class variable that holds the data that we want to adapt
+    // Arraylist of data that we want to adapt
     public ArrayList<ContentDetail> topicsToAdapt;
 
     public void setData(ArrayList<ContentDetail> topicsToAdapt) {
-        // This is basically a Setter that we use to give data to the adapter
+        //Setter that we use to give data to the adapter
         this.topicsToAdapt = topicsToAdapt;
 
     }
@@ -30,8 +32,7 @@ public class YoutubeAdapter extends RecyclerView.Adapter<YoutubeAdapter.YtViewHo
                 LayoutInflater.from(parent.getContext())
                         .inflate(R.layout.content_view_recyclerview, parent, false);
 
-        // Then create an instance of your custom ViewHolder with the View you got from inflating
-        // the layout.
+
         YtViewHolder ytViewHolder = new YtViewHolder(view);
         return ytViewHolder;
     }
@@ -57,10 +58,6 @@ public class YoutubeAdapter extends RecyclerView.Adapter<YoutubeAdapter.YtViewHo
     }
 
 
-
-    // ViewHolder represents one item, but doesn't have data when it's first constructed.
-    // We assign the data in onBindViewHolder.
-
     @Override
     public int getItemCount() {
         return topicsToAdapt.size();
@@ -71,14 +68,12 @@ public class YoutubeAdapter extends RecyclerView.Adapter<YoutubeAdapter.YtViewHo
         public TextView topicTextView;
 
 
-        // This constructor is used in onCreateViewHolder
         public YtViewHolder(View v) {
-            super(v);  // runs the constructor for the ViewHolder superclass
+            super(v);
             view = v;
             topicTextView = v.findViewById(R.id.topic_title1);
         }
     }
 }
 
-
-
+//References: https://github.com/amisrs/NYT/blob/master/app/src/main/java/com/example/nyt/ArticleAdapter.java

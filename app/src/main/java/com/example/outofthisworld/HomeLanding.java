@@ -1,6 +1,5 @@
 package com.example.outofthisworld;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class HomeLanding extends AppCompatActivity {
 
     Button content;
-    Button flashcards;
+    Button funfacts;
     Button videos;
     Button quiz;
     Button apibutton;
@@ -22,15 +21,19 @@ public class HomeLanding extends AppCompatActivity {
         setContentView(R.layout.landing_page);
 
         content = findViewById(R.id.content);
-        flashcards = findViewById(R.id.flashcards);
+
+        funfacts = findViewById(R.id.funfacts);
         videos = findViewById(R.id.videos);
         quiz = findViewById(R.id.quiz);
-        apibutton=findViewById(R.id.apibutton);
+        apibutton = findViewById(R.id.apibutton);
 
         Intent intent = getIntent();
         Intent homeIntent = getIntent();
         Intent exitIntent = getIntent();
 
+        //setting all the intents for all the landing page buttons so they lead to the correct classes
+
+        //Content button
         content.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,7 +42,8 @@ public class HomeLanding extends AppCompatActivity {
             }
         });
 
-        flashcards.setOnClickListener(new View.OnClickListener() {
+        //FunFacts button
+        funfacts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent2 = new Intent(HomeLanding.this, FunFacts.class);
@@ -47,6 +51,7 @@ public class HomeLanding extends AppCompatActivity {
             }
         });
 
+        //Videos button
         videos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,6 +60,7 @@ public class HomeLanding extends AppCompatActivity {
             }
         });
 
+        //Quiz button
         quiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,6 +69,7 @@ public class HomeLanding extends AppCompatActivity {
             }
         });
 
+        //Celestial Bodies button
         apibutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

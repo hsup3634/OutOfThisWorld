@@ -7,28 +7,30 @@ import java.util.Random;
 
 public class FactsColours {
 
-    public String[] mColors = {
-            "#99ccff", // light blue
-            "#3366ff", // dark blue
-            "#9933ff", // purple
-            "#ff0000", // red
-            "#ff00ff", //pink
-            "#66ff66", //green
+    public String[] colorsList = {
+            //array of all the colour codes that the constraint layout will change to when the new fact button is pressed
+            "#99ccff",
+            "#3366ff",
+            "#ff0000",
+            "#ff00ff",
+            "#66ff66",
 
 
     };
 
-    // Method (abilities: things the object can do)
+    //getter for colour
     public int getColor() {
         String color = "";
 
-        // Randomly select a fact
+        //once again randomly selecting a fact
         Random randomGenerator = new Random(); // Construct a new Random number generator
-        int randomNumber = randomGenerator.nextInt(mColors.length);
+        int randomNumber = randomGenerator.nextInt(colorsList.length);
 
-        color = mColors[randomNumber];
+        color = colorsList[randomNumber];
         @SuppressLint("Range") int colorAsInt = Color.parseColor(color);
 
         return colorAsInt;
     }
 }
+
+//this code is derived from: https://github.com/treehouse/android-fun-facts-github/blob/master/app/src/main/java/com/teamtreehouse/funfacts/ColorWheel.java

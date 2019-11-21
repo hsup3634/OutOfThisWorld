@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.ArrayList;
 
 
@@ -22,6 +24,12 @@ public class SolarSystemDetail extends AppCompatActivity {
     private View view;
 
 
+    //this class is just a detailed view of each item from the recycler view
+    //once the user clicks on the name, the detail view shows the escape velocity, surface gravity
+    //equatorial radius, who it was discovered by, and date of discovery
+    //note: the API does not have data for all the planets listed so some items may appear as blank
+    //such as discovered by for moon, or 0.0 for gravity and escape of some celestial bodies
+    //this is due to the API not having data, not because it is not being retrieved correctly
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,7 +59,7 @@ public class SolarSystemDetail extends AppCompatActivity {
         discoveredByTV = findViewById(R.id.solarDiscoveredBy);
         discoveryDateTV = findViewById(R.id.solarDiscoveryDate);
 
-
+        //setting the UI elements to hold the API data
         englishNameTV.setText(englishName);
         escapeTV.setText(String.valueOf(escape));
         gravityTV.setText(String.valueOf(gravity));

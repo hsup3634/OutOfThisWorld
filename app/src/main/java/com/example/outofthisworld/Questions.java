@@ -11,6 +11,7 @@ public class Questions implements Serializable {
     private String inc2;
 
 
+    //constructor for the questions - each question has an id for question number, a correct answer followed by two incorrect answers
     public Questions(int id, String ans, String inc1, String inc2) {
         this.id = id;
         this.ans = ans;
@@ -19,6 +20,7 @@ public class Questions implements Serializable {
 
     }
 
+    //getters
     public int getId() {
         return id;
     }
@@ -37,3 +39,5 @@ public class Questions implements Serializable {
 
 
 }
+
+

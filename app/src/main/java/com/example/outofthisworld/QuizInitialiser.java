@@ -81,10 +81,12 @@ public class QuizInitialiser extends AppCompatActivity {
 
         repeatQuestions();
 
+
         button_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 checkAnswer(quizQuestions[questionCurrent]);
+                //if the question that the user is currently at is equal to the number of questions in total (i.e. 24), then direct user to their results page
                 if (questionCurrent == (quizQuestions.length - 1)) {
 
                     Intent intent = new Intent(QuizInitialiser.this, QuizEnd.class);
@@ -93,6 +95,7 @@ public class QuizInitialiser extends AppCompatActivity {
 
                     startActivity(intent);
 
+                    //if they havent yet finished the quiz, show the next question, increment the counter and set the button as invisible
                 } else {
                     questionCurrent++;
                     repeatQuestions();
@@ -101,6 +104,7 @@ public class QuizInitialiser extends AppCompatActivity {
             }
         });
 
+        //if user exits - bring them back to the landing page
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -110,6 +114,7 @@ public class QuizInitialiser extends AppCompatActivity {
             }
         });
 
+        //if the user clicks on a answer, set the radio button to checked
         quizRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -121,7 +126,7 @@ public class QuizInitialiser extends AppCompatActivity {
 
     }
 
-//this code below clears the question and radio buttons once the user clicks the next button
+    //this code below clears the question and radio buttons once the user clicks the next button
     public void repeatQuestions() {
         button_next.setVisibility(View.INVISIBLE);
         quizRadioGroup.clearCheck();
@@ -140,7 +145,7 @@ public class QuizInitialiser extends AppCompatActivity {
 
     }
 
-//Quiz code derived from the quiz tutorial: https://www.youtube.com/watch?v=AH3SQOMEgZk
+    //Quiz code derived from the quiz tutorial: https://www.youtube.com/watch?v=AH3SQOMEgZk
     //note: we changed our code to radio buttons instead of the buttons used in the video
     public void checkAnswer(Questions questions) {
         String ans;
@@ -181,7 +186,7 @@ public class QuizInitialiser extends AppCompatActivity {
         else return answer3.getText().toString();
     }
 
-
+    //this code below randomly assigns the answers to the radio buttons to ensure the user doesnt get the same quiz format all the time
     public void assignRadioAnswers(Questions questions) {
         ArrayList<String> questionOps = new ArrayList<>(Arrays.asList(
                 questions.getAns(),
@@ -189,16 +194,19 @@ public class QuizInitialiser extends AppCompatActivity {
                 questions.getInc2()
         ));
 
+        //setting the first radio buttons text to the any random answer out of the three
         int numberRandom = Math.abs(new Random().nextInt(3));
         answer1.setText(questionOps.get(numberRandom));
         questionOps.remove(numberRandom);
 
+
+        //setting the second radio button to any 2 of the answers left
         numberRandom = Math.abs(new Random().nextInt(2));
         answer2.setText(questionOps.get(numberRandom));
         questionOps.remove(numberRandom);
 
+        //setting the last radio button to the last remaining answer
         answer3.setText(questionOps.get(0));
-
 
 
     }

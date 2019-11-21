@@ -36,7 +36,7 @@
         app:layout_constraintVertical_bias="0.2" />
 
     <Button
-        android:id="@+id/flashcards"
+        android:id="@+id/funfacts"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="293dp"
         android:layout_height="61dp"
@@ -81,7 +81,7 @@
         android:topRightRadius="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/flashcards" />
+        app:layout_constraintTop_toBottomOf="@+id/funfacts" />
 
     <Button
         android:id="@+id/quiz"

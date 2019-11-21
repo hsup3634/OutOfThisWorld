@@ -4,19 +4,18 @@ public class ContentDetail {
 
     private String ytTitle;
     private String ytDescription;
-
     // unique identifier of a Topic
     private int topicID;
     // Name of the Topic
     private String title;
     // Text Description of the Topic
     private String text;
-    // Resource ID of associated image (e.g. R.drawable.my_image)
     private int imageDrawableId;
 
     private String youtubeVideo;
 
 
+    //constructor so the contentDetailActivity can display the following - the title, text and image using the corresponding topicID
     public ContentDetail(int topicID, String title, String text, int imageDrawableId) {
         this.topicID = topicID;
         this.title = title;
@@ -24,6 +23,7 @@ public class ContentDetail {
         this.imageDrawableId = imageDrawableId;
     }
 
+    //All the getters and setters required
     public String getYtTitle() {
         return ytTitle;
     }
@@ -40,6 +40,7 @@ public class ContentDetail {
         this.ytDescription = ytDescription;
     }
 
+    //constructor for the youtube hashmap data
     public ContentDetail(int topicID, String youtubeVideo, String ytTitle, String ytDescription) {
         this.topicID = topicID;
         this.youtubeVideo = youtubeVideo;

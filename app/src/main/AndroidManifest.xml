@@ -19,8 +19,6 @@
         <activity android:name=".HomeLanding"></activity>
         <activity android:name=".Content"></activity>
         <activity android:name=".Videos"></activity>
-        <activity android:name=".Flashcards"></activity>
-        <activity android:name=".Quiz"></activity>
         <activity android:name=".VideoTopic"></activity>
         <activity android:name=".ContentDetailActivity"></activity>
         <activity android:name=".QuizInitialiser"></activity>

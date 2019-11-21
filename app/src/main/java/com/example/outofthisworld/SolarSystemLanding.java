@@ -46,11 +46,11 @@ public class SolarSystemLanding extends AppCompatActivity {
 
         rv_solartopics = findViewById(R.id.rv_solartopics);
         rv_solartopics.setVisibility(View.VISIBLE);
-        searchButton= findViewById(R.id.searchButton);
+        searchButton = findViewById(R.id.searchButton);
 
         searchBodiesText = findViewById(R.id.bodiesSearch);
         searchBodiesText.setVisibility(View.VISIBLE);
-        setBodiesText=findViewById(R.id.setSearch);
+        setBodiesText = findViewById(R.id.setSearch);
         setBodiesText.setVisibility(View.INVISIBLE);
 
         layoutManager = new LinearLayoutManager(this);
@@ -62,20 +62,27 @@ public class SolarSystemLanding extends AppCompatActivity {
 
         final Intent intent = getIntent();
 
+        //creating instance of the adapter
         final SolarSystemAdapter solarSystemAdapter = new SolarSystemAdapter();
 
+        //
         final RequestQueue requestQueue = Volley.newRequestQueue(SolarSystemLanding.this);
         final String url = "https://api.le-systeme-solaire.net/rest/bodies/";
 
         Response.Listener<String> responseListener = new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                //getting gson from the Json Api file
                 Gson gson = new Gson();
                 SolarResponse solarResponse = gson.fromJson(response, SolarResponse.class);
+                //retrieving the getBodies data from the SolarResponse file
                 final ArrayList<SolarSystem> solarSystem = solarResponse.getBodies();
+                //setting adapter data to the arraylist of results above
                 solarSystemAdapter.setData(solarSystem);
+                //setting the recycler view to show the adapted data
                 rv_solartopics.setAdapter(solarSystemAdapter);
 
+                //the code below is for the search bar functionality
                 searchButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -83,9 +90,9 @@ public class SolarSystemLanding extends AppCompatActivity {
                         setBodiesText.setText(userInput);
                         String input = setBodiesText.getText().toString();
                         String userInput = input.toLowerCase();
-                        ArrayList<SolarSystem>newBodies=new ArrayList<>();
-                        for(SolarSystem englishName: solarSystem) {
-                            if(englishName.getEnglishName().toLowerCase().contains(userInput)) {
+                        ArrayList<SolarSystem> newBodies = new ArrayList<>();
+                        for (SolarSystem englishName : solarSystem) {
+                            if (englishName.getEnglishName().toLowerCase().contains(userInput)) {
                                 newBodies.add(englishName);
                             }
                         }
@@ -93,11 +100,9 @@ public class SolarSystemLanding extends AppCompatActivity {
                         rv_solartopics.setAdapter(solarSystemAdapter);
                         rv_solartopics.setVisibility(view.VISIBLE);
                     }
-                                                });
+                });
 
                 requestQueue.stop();
-
-
 
 
             }
@@ -115,7 +120,11 @@ public class SolarSystemLanding extends AppCompatActivity {
 
         requestQueue.add(stringRequest);
 
-        //return view;
+
     }
 
 }
+
+//Reference: API used: https://api.le-systeme-solaire.net/en/
+//this code is based off tutorial work of the NYT app: https://github.com/amisrs/NYT/blob/master/app/src/main/java/com/example/nyt/fragments/BookRecyclerFragment.java
+//note: our class is an activity not a fragment

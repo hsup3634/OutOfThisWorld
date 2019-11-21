@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class SolarSystem {
 
-
+    //this contains the variable we want to retrieve from the API
     private String id;
     @SerializedName("englishName")
     private String englishName;
@@ -19,7 +19,7 @@ public class SolarSystem {
     private String discoveryDate;
     public int num_results;
 
-
+    //constructor for the variables
     public SolarSystem() {
         this.id = id;
         this.englishName = englishName;
@@ -33,6 +33,7 @@ public class SolarSystem {
 
     }
 
+    //getters and setters
     public double getEscape() {
         return escape;
     }
@@ -107,5 +108,7 @@ public class SolarSystem {
 
     private ArrayList<SolarSystem> solarsystem;
 
-    public ArrayList<SolarSystem> getSolarsystem() {return solarsystem;}
+    public ArrayList<SolarSystem> getSolarsystem() {
+        return solarsystem;
+    }
 }

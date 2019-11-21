@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,31 +11,37 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class FunFacts extends AppCompatActivity {
 
-    private Facts mFactBook = new Facts();
-    private FactsColours mColorWheel = new FactsColours();
+    private Facts factsList = new Facts();
+    private FactsColours factsColours = new FactsColours();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.facts);
 
-        final TextView factLabel = (TextView) findViewById(R.id.factTextView);
-        final Button showFactButton = (Button) findViewById(R.id.showFactButton);
-        final ConstraintLayout constraintLayout = (ConstraintLayout) findViewById(R.id.relativelayout);
+        //retrieving UI element IDs
+        final TextView factText = (TextView) findViewById(R.id.factTextView);
+        final Button factButton = (Button) findViewById(R.id.showFactButton);
+        final ConstraintLayout constraintLayout = (ConstraintLayout) findViewById(R.id.constraintLayout);
 
+        //intent from HomeLanding page
         Intent intent2 = getIntent();
 
+        //retrieves fact once clicked
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String fact = mFactBook.getFact();
-                factLabel.setText(fact);
+                String fact = factsList.getFact();
+                factText.setText(fact);
 
-                int color = mColorWheel.getColor();
+                //changing colour once button is clicked as well
+                int color = factsColours.getColor();
                 constraintLayout.setBackgroundColor(color);
-                showFactButton.setTextColor(color);
+                factButton.setTextColor(color);
             }
         };
-        showFactButton.setOnClickListener(listener);
+        factButton.setOnClickListener(listener);
     }
 }
+
+//reference: this code is derived from: https://github.com/treehouse/android-fun-facts-github/blob/master/app/src/main/java/com/teamtreehouse/funfacts/FunFactsActivity.java

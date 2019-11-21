@@ -7,7 +7,11 @@ import java.util.List;
 
 class ContentDatabase {
 
-    public static ContentDetail getTopicById(int topicID) { return topics.get(topicID); }
+    //this class is a fake database that inserts the data in below and populates ArrayLists
+    //note: this code is based off the FakeDatabase class used in the NYT app in tutorials: https://github.com/amisrs/NYT/blob/master/app/src/main/java/com/example/nyt/FakeDatabase.java
+    public static ContentDetail getTopicById(int topicID) {
+        return topics.get(topicID);
+    }
 
     public static ArrayList<ContentDetail> getAllMenuitems() {
         return new ArrayList<ContentDetail>((List) Arrays.asList(topics.values().toArray()));
@@ -15,7 +19,7 @@ class ContentDatabase {
 
     private static final HashMap<Integer, ContentDetail> topics = new HashMap<>();
 
-    // store data for content_detail.xml page
+    // store data for content_detail.xml page - has all the topic content
     static {
         topics.put(1, new ContentDetail(
                 1, "The Basics of Astronomy", "Content:\n" +
@@ -140,7 +144,9 @@ class ContentDatabase {
         ));
     }
 
-    public static HashMap<Integer, ContentDetail> youtubeVidMap = new HashMap(){{
+
+    //using the same HashMap principles as above, we created one to store the youtube videos key, the title and description as there is only one video per topic and thus the ids correspond
+    public static HashMap<Integer, ContentDetail> youtubeVidMap = new HashMap() {{
         put(1, new ContentDetail(0, "6TGCPXhMLtU", "Understanding Kepler's Three Laws", "In this video you will be introduced to Kepler's 3 laws and see how they are relevant to orbiting objects"));
         put(2, new ContentDetail(1, "TRAbZxQHlVw", "Astronomy Crash Course: Gravity", "This video discusses gravity as a force, the different types of orbits, escape velocity and weightless mass"));
         put(3, new ContentDetail(2, "iwlMmJs1f5o", "Stellar Parallax and Measuring Distance", "Have you ever travelled down a road in a car and looked at mountains or hills in the distance? If you have, you’ve probably noticed that while nearby trees quickly fly past the window, the mountains move much slower, and in the far distance the Moon and stars don’t seem to move at all. This is because of a phenomenon called \"parallax\""));
@@ -149,8 +155,7 @@ class ContentDatabase {
         put(6, new ContentDetail(5, "bo4mEtc434w", "Life in the Universe", "Does life exist anywhere else in the universe? And how did it get started? Scientists are seeking the answers in the cosmos, our solar system and right here on planet Earth."));
     }};
 
-
-
+    //this getter is used the youtubeTopic class to retrive the items in the HashMap
     public static ContentDetail getVideoById(int topicid) {
         return youtubeVidMap.get(topicid);
     }

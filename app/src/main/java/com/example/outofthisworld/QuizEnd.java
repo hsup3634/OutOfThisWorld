@@ -28,8 +28,10 @@ public class QuizEnd extends AppCompatActivity {
         shareResult = findViewById(R.id.sharebutton);
         exitBtn = findViewById(R.id.exitBtn);
 
-        ArrayList<Questions> correct = (ArrayList<Questions>)getIntent().getSerializableExtra("correct");
-        ArrayList<Questions> incorrect = (ArrayList<Questions>)getIntent().getSerializableExtra("incorrect");
+        //storing the correct and incorrect answers that the user did in two different arrayLists so they can be used to calculate whether the mission has be passed or failed
+        ArrayList<Questions> correct = (ArrayList<Questions>) getIntent().getSerializableExtra("correct");
+        ArrayList<Questions> incorrect = (ArrayList<Questions>) getIntent().getSerializableExtra("incorrect");
+
 
         float results[] = {correct.size(), incorrect.size()};
         String enter[] = {"Correct!", "Incorrect:("};
@@ -40,6 +42,7 @@ public class QuizEnd extends AppCompatActivity {
 
         showResults(correct, incorrect, resultValue);
 
+        //share code button reference at end of code
         shareResult.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,6 +57,7 @@ public class QuizEnd extends AppCompatActivity {
             }
         });
 
+        //onClick listener so once exit button is pressed, it leads user back to the landing page
         exitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,18 +69,8 @@ public class QuizEnd extends AppCompatActivity {
 
     }
 
-    public void showResults (ArrayList<Questions> correct, ArrayList<Questions> incorrect, double result) {
-        String resultAnswer = correct.size() + " / 24.0";
-        this.resultBox.setText(resultAnswer);
 
-        String quizMark = grade(result);
-        String mission = quizMark;
-        missionStatus.setText(mission);
-
-
-
-    }
-
+    //simple if statements - if the user has passed the quiz the mission is successful, but if they fail, the mission fails and the rocket crashes
     public String grade(double result) {
         double quizResult = (result * 100.0);
         String quizMark;
@@ -84,11 +78,27 @@ public class QuizEnd extends AppCompatActivity {
         if (quizResult < 50) {
             quizMark = "MISSION FAILED! THE ROCKET CRASHED";
         } else {
-               quizMark = "MISSION SUCCESSFUL! THE ROCKET LANDED SAFELY ON MARS";
-            }
-        return quizMark;
+            quizMark = "MISSION SUCCESSFUL! THE ROCKET LANDED SAFELY ON MARS";
         }
+        return quizMark;
     }
+
+    //this method is to display the users result but retrieving the correct ArrayList
+    public void showResults(ArrayList<Questions> correct, ArrayList<Questions> incorrect, double result) {
+        //get size of the correct array and display it out of 24
+        String resultAnswer = correct.size() + " / 24.0";
+        this.resultBox.setText(resultAnswer);
+
+        //this retrieves the pass/fail status and sets it as the text based on what the user got
+        String quizMark = grade(result);
+        String mission = quizMark;
+        missionStatus.setText(mission);
+
+
+    }
+
+
+}
 
 
 //REFERENCES

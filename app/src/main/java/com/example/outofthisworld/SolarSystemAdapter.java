@@ -14,10 +14,12 @@ import androidx.annotation.NonNull;
 import java.util.ArrayList;
 
 public class SolarSystemAdapter extends RecyclerView.Adapter<SolarSystemAdapter.SolarSystemViewHolder> {
+
+    //arraylist that holds the data we want to adapt
     private ArrayList<SolarSystem> solarSystemToAdapt;
     private RecyclerView recycler;
 
-    //run set data earlier?
+    //setter to give data to the adapter
     public void setData(ArrayList<SolarSystem> solarSystemToAdapt) {
         this.solarSystemToAdapt = solarSystemToAdapt;
 
@@ -38,9 +40,11 @@ public class SolarSystemAdapter extends RecyclerView.Adapter<SolarSystemAdapter.
     public void onBindViewHolder(@NonNull SolarSystemViewHolder holder, int position) {
         final SolarSystem solarSystemAtPosition = solarSystemToAdapt.get(position);
 
+        //setting the name of the item in the recycler view to hold the name of the celestial body
         holder.solarEnglishName.setText(solarSystemAtPosition.getEnglishName());
 
 
+        //on click listener so when the name is clicked, it leads to the detailed view
         holder.solarEnglishName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -85,8 +89,8 @@ public class SolarSystemAdapter extends RecyclerView.Adapter<SolarSystemAdapter.
     }
 
 
-
-
 }
 
+//reference: this code is based on tutorial content and the NYT adapter: https://github.com/amisrs/NYT/blob/master/app/src/main/java/com/example/nyt/ArticleAdapter.java
+//the key change to the code is that our class is not a fragment, but an activity
 
