@@ -27,6 +27,7 @@ public class HomeLanding extends AppCompatActivity {
 
         Intent intent = getIntent();
         Intent homeIntent = getIntent();
+        Intent exitIntent = getIntent();
 
         content.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -16,6 +16,7 @@ public class QuizEnd extends AppCompatActivity {
     TextView resultBox;
     TextView missionStatus;
     Button shareResult;
+    Button exitBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,7 @@ public class QuizEnd extends AppCompatActivity {
         resultBox = findViewById(R.id.resultBox);
         missionStatus = findViewById(R.id.missionStatus);
         shareResult = findViewById(R.id.sharebutton);
+        exitBtn = findViewById(R.id.exitBtn);
 
         ArrayList<Questions> correct = (ArrayList<Questions>)getIntent().getSerializableExtra("correct");
         ArrayList<Questions> incorrect = (ArrayList<Questions>)getIntent().getSerializableExtra("incorrect");
@@ -49,6 +51,14 @@ public class QuizEnd extends AppCompatActivity {
                 shareIntent.putExtra(Intent.EXTRA_TEXT, body);
                 startActivity(Intent.createChooser(shareIntent, "Share Using"));
 
+            }
+        });
+
+        exitBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent exitIntent = new Intent(QuizEnd.this, HomeLanding.class);
+                startActivity(exitIntent);
             }
         });
 

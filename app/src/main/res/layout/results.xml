@@ -8,10 +8,25 @@
     android:background="@drawable/bgstars"
     android:orientation="vertical" >
 
+    <Button
+        android:id="@+id/exitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#EA8830"
+        android:fontFamily="@font/nasalization"
+        android:text="EXIT"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.011" />
+
     <TextView
         android:id="@+id/ResultsTitle"
-        android:layout_width="match_parent"
-        android:layout_height="53dp"
+        android:layout_width="385dp"
+        android:layout_height="52dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
