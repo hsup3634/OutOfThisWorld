@@ -7,13 +7,13 @@ import java.util.ArrayList;
 public class SolarSystem {
 
 
-    private int id;
+    private String id;
     @SerializedName("englishName")
     private String englishName;
     private int massExponent;
     private int volExponent;
     private float gravity;
-    private int equaRadius;
+    private double equaRadius;
     private String discoveredBy;
     private String discoveryDate;
     public int num_results;
@@ -31,11 +31,11 @@ public class SolarSystem {
 
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -71,7 +71,7 @@ public class SolarSystem {
         this.gravity = gravity;
     }
 
-    public int getEquaRadius() {
+    public double getEquaRadius() {
         return equaRadius;
     }
 

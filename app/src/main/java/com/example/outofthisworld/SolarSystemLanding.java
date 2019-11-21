@@ -17,6 +17,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -45,6 +46,7 @@ public class SolarSystemLanding extends AppCompatActivity {
         rv_solartopics.setLayoutManager(layoutManager);
 
         Intent intent2 = getIntent();
+        Intent intentapi = getIntent();
 
 
         final Intent intent = getIntent();
@@ -61,12 +63,14 @@ public class SolarSystemLanding extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 Gson gson = new Gson();
-                SolarSystem solarSystem = gson.fromJson(response, SolarSystem.class);
-                final ArrayList<SolarSystem> solarSystemArrayList = new ArrayList<>(Arrays.asList(solarSystem));
-                solarSystemAdapter.setData(solarSystemArrayList);
-                System.out.println(solarSystem);
+                SolarResponse solarResponse = gson.fromJson(response, SolarResponse.class);
+                ArrayList<SolarSystem> solarSystem = solarResponse.getBodies();
+                solarSystemAdapter.setData(solarSystem);
+//                solarSystemAdapter.setData(solarSystemArrayList);
+//                System.out.println(solarSystem);
 
                 rv_solartopics.setAdapter(solarSystemAdapter);
+                requestQueue.stop();
 
                 //final Arraylist<SolarSystem> solarSystemArraylist = new ArrayList<>(solarSystem1);
 
@@ -78,8 +82,7 @@ public class SolarSystemLanding extends AppCompatActivity {
         Response.ErrorListener solarSystemErrorListener = new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
-
+                System.out.println("Error");
             }
 
         };

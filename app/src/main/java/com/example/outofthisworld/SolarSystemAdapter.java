@@ -17,6 +17,7 @@ public class SolarSystemAdapter extends RecyclerView.Adapter<SolarSystemAdapter.
     private ArrayList<SolarSystem> solarSystemToAdapt;
     private RecyclerView recycler;
 
+    //run set data earlier?
     public void setData(ArrayList<SolarSystem> solarSystemToAdapt) {
         this.solarSystemToAdapt = solarSystemToAdapt;
 
@@ -26,7 +27,7 @@ public class SolarSystemAdapter extends RecyclerView.Adapter<SolarSystemAdapter.
     @Override
     public SolarSystemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.solarsystem_detail, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.solar_view_recyclerview, parent, false);
 
         SolarSystemViewHolder solarSystemViewHolder = new SolarSystemViewHolder(view);
         return solarSystemViewHolder;

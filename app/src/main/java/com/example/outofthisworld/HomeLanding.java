@@ -14,6 +14,7 @@ public class HomeLanding extends AppCompatActivity {
     Button flashcards;
     Button videos;
     Button quiz;
+    Button apibutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,7 @@ public class HomeLanding extends AppCompatActivity {
         flashcards = findViewById(R.id.flashcards);
         videos = findViewById(R.id.videos);
         quiz = findViewById(R.id.quiz);
+        apibutton=findViewById(R.id.apibutton);
 
         Intent intent = getIntent();
         Intent homeIntent = getIntent();
@@ -58,6 +60,14 @@ public class HomeLanding extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent4 = new Intent(HomeLanding.this, QuizStory.class);
                 startActivity(intent4);
+            }
+        });
+
+        apibutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentapi = new Intent(HomeLanding.this, SolarSystemLanding.class);
+                startActivity(intentapi);
             }
         });
     }

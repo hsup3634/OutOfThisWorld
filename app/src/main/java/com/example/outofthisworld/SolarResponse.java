@@ -1,13 +1,21 @@
 package com.example.outofthisworld;
 
+import java.util.ArrayList;
+
 public class SolarResponse {
 
 
-    public SolarSystem getResults() {
-        return results;
+    public void setBodies(ArrayList<SolarSystem> bodies) {
+        this.bodies = bodies;
     }
 
-    public SolarSystem results;
+    public ArrayList<SolarSystem> getBodies() {
+        return bodies;
+    }
+
+
+
+    public ArrayList<SolarSystem> bodies;
 
 }
 
