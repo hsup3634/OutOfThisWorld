@@ -12,7 +12,8 @@ public class SolarSystem {
     private String englishName;
     private int massExponent;
     private int volExponent;
-    private float gravity;
+    private double gravity;
+    private double escape;
     private double equaRadius;
     private String discoveredBy;
     private String discoveryDate;
@@ -28,7 +29,16 @@ public class SolarSystem {
         this.equaRadius = equaRadius;
         this.discoveredBy = discoveredBy;
         this.discoveryDate = discoveryDate;
+        this.escape = escape;
 
+    }
+
+    public double getEscape() {
+        return escape;
+    }
+
+    public void setEscape(double escape) {
+        this.escape = escape;
     }
 
     public String getId() {
@@ -63,11 +73,11 @@ public class SolarSystem {
         this.volExponent = volExponent;
     }
 
-    public float getGravity() {
+    public double getGravity() {
         return gravity;
     }
 
-    public void setGravity(float gravity) {
+    public void setGravity(double gravity) {
         this.gravity = gravity;
     }
 

@@ -23,15 +23,6 @@ import java.util.Arrays;
 
 public class SolarSystemLanding extends AppCompatActivity {
 
-
-
-    private TextView englishNameTV;
-    private TextView massExponentTV;
-    private TextView volExponentTV;
-    private TextView gravityTV;
-    private TextView equaRadiusTV;
-    private TextView discoveredByTV;
-    private TextView discoveryDateTV;
     ArrayList<SolarSystem> solarArray;
     private RecyclerView rv_solartopics;
     private RecyclerView.LayoutManager layoutManager;

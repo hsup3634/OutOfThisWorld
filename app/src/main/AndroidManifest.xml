@@ -29,6 +29,7 @@
         <activity android:name=".TopicSelectorGame"></activity>
         <activity android:name=".FunFacts"></activity>
         <activity android:name=".SolarSystemLanding"></activity>
+        <activity android:name=".SolarSystemDetail"></activity>
 
     </application>
 

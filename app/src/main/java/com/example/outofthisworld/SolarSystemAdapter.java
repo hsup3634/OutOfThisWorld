@@ -40,6 +40,7 @@ public class SolarSystemAdapter extends RecyclerView.Adapter<SolarSystemAdapter.
 
         holder.solarEnglishName.setText(solarSystemAtPosition.getEnglishName());
 
+
         holder.solarEnglishName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,6 +51,7 @@ public class SolarSystemAdapter extends RecyclerView.Adapter<SolarSystemAdapter.
                 intent.putExtra("id", solarSystemAtPosition.getId());
                 intent.putExtra("englishName", solarSystemAtPosition.getEnglishName());
                 intent.putExtra("massExponent", solarSystemAtPosition.getMassExponent());
+                intent.putExtra("escape", solarSystemAtPosition.getEscape());
                 intent.putExtra("volExponent", solarSystemAtPosition.getVolExponent());
                 intent.putExtra("gravity", solarSystemAtPosition.getGravity());
                 intent.putExtra("equaRadius", solarSystemAtPosition.getEquaRadius());
