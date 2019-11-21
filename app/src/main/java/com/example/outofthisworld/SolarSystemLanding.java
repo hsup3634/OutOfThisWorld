@@ -3,6 +3,8 @@ package com.example.outofthisworld;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +22,7 @@ import com.google.gson.Gson;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class SolarSystemLanding extends AppCompatActivity {
 
@@ -27,12 +30,29 @@ public class SolarSystemLanding extends AppCompatActivity {
     private RecyclerView rv_solartopics;
     private RecyclerView.LayoutManager layoutManager;
     private View view;
+
+    private EditText searchBodiesText;
+    private TextView setBodiesText;
+    private ImageButton searchButton;
+    private String userInput;
+    private List<SolarSystem> bodies;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.solar_view);
 
+
         rv_solartopics = findViewById(R.id.rv_solartopics);
+        rv_solartopics.setVisibility(View.INVISIBLE);
+        searchButton= findViewById(R.id.searchButton);
+
+        searchBodiesText = findViewById(R.id.bodiesSearch);
+        searchBodiesText.setVisibility(View.VISIBLE);
+        setBodiesText=findViewById(R.id.setSearch);
+        setBodiesText.setVisibility(View.INVISIBLE);
+
         layoutManager = new LinearLayoutManager(this);
         rv_solartopics.setLayoutManager(layoutManager);
 
@@ -41,9 +61,6 @@ public class SolarSystemLanding extends AppCompatActivity {
 
 
         final Intent intent = getIntent();
-        //final SolarSystem solarSystem = new SolarSystem();
-
-        //LinearLayoutManager layoutManager = new LinearLayoutManager(view.getContext());
 
         final SolarSystemAdapter solarSystemAdapter = new SolarSystemAdapter();
 
@@ -55,15 +72,31 @@ public class SolarSystemLanding extends AppCompatActivity {
             public void onResponse(String response) {
                 Gson gson = new Gson();
                 SolarResponse solarResponse = gson.fromJson(response, SolarResponse.class);
-                ArrayList<SolarSystem> solarSystem = solarResponse.getBodies();
+                final ArrayList<SolarSystem> solarSystem = solarResponse.getBodies();
                 solarSystemAdapter.setData(solarSystem);
-//                solarSystemAdapter.setData(solarSystemArrayList);
-//                System.out.println(solarSystem);
-
                 rv_solartopics.setAdapter(solarSystemAdapter);
+
+                searchButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        userInput = searchBodiesText.getText().toString();
+                        setBodiesText.setText(userInput);
+                        String input = setBodiesText.getText().toString();
+                        String userInput = input.toLowerCase();
+                        ArrayList<SolarSystem>newBodies=new ArrayList<>();
+                        for(SolarSystem englishName: solarSystem) {
+                            if(englishName.getEnglishName().toLowerCase().contains(userInput)) {
+                                newBodies.add(englishName);
+                            }
+                        }
+                        solarSystemAdapter.setData(newBodies);
+                        rv_solartopics.setAdapter(solarSystemAdapter);
+                        rv_solartopics.setVisibility(view.VISIBLE);
+                    }
+                                                });
+
                 requestQueue.stop();
 
-                //final Arraylist<SolarSystem> solarSystemArraylist = new ArrayList<>(solarSystem1);
 
 
 

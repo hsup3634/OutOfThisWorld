@@ -9,7 +9,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/celestialBodiesTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nasalization"
@@ -26,8 +26,8 @@
 
     <ScrollView
         android:id="@+id/scrollview_main"
-        android:layout_width="349dp"
-        android:layout_height="560dp"
+        android:layout_width="352dp"
+        android:layout_height="490dp"
         android:layout_marginTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,8 +43,9 @@
 
     <Button
         android:id="@+id/startGameButton"
-        android:layout_width="wrap_content"
-        android:layout_height="28dp"
+        android:layout_width="267dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:background="@color/red"
         android:fontFamily="@font/nasalization"
         android:text="@string/gameInstructors"
@@ -52,6 +53,6 @@
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/celestialBodiesTitle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

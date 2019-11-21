@@ -10,8 +10,8 @@
 
     <TextView
         android:id="@+id/storyTitle"
-        android:layout_width="match_parent"
-        android:layout_height="53dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -28,16 +28,17 @@
         android:id="@+id/storyText"
         android:layout_width="324dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
         android:fontFamily="@font/nasalization"
         android:textAlignment="center"
-        android:textSize="16sp"
+        android:textSize="13sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/storyTitle"
-        app:layout_constraintVertical_bias="0.248"
+        app:layout_constraintTop_toBottomOf="@+id/storyTitle"
         tools:text=" " />
 
     <pl.droidsonroids.gif.GifImageView
@@ -45,7 +46,8 @@
         android:id="@+id/planetGif"
         android:layout_width="320dp"
         android:layout_height="202dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="48dp"
         android:src="@drawable/spaceship"
         app:layout_constraintBottom_toTopOf="@id/startQuiz"
@@ -59,13 +61,12 @@
         android:id="@+id/startQuiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:background="#E68730"
         android:fontFamily="@font/nasalization"
         android:text="Accept Mission"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/planetGif"
-        app:layout_constraintVertical_bias="0.209" />
+        app:layout_constraintTop_toBottomOf="@+id/planetGif" />
 </androidx.constraintlayout.widget.ConstraintLayout>

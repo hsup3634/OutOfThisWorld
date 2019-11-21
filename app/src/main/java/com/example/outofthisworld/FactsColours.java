@@ -8,10 +8,13 @@ import java.util.Random;
 public class FactsColours {
 
     public String[] mColors = {
-            "#324856", // light blue
-            "#4A746A", // dark blue
-            "#D18237", // mauve
-            "#D66C44", // red
+            "#99ccff", // light blue
+            "#3366ff", // dark blue
+            "#9933ff", // purple
+            "#ff0000", // red
+            "#ff00ff", //pink
+            "#66ff66", //green
+
 
     };
 
