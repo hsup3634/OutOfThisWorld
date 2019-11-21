@@ -45,7 +45,7 @@ public class SolarSystemLanding extends AppCompatActivity {
 
 
         rv_solartopics = findViewById(R.id.rv_solartopics);
-        rv_solartopics.setVisibility(View.INVISIBLE);
+        rv_solartopics.setVisibility(View.VISIBLE);
         searchButton= findViewById(R.id.searchButton);
 
         searchBodiesText = findViewById(R.id.bodiesSearch);
