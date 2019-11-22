@@ -10,7 +10,7 @@
 
     <TextView
         android:id="@+id/storyTitle"
-        android:layout_width="200dp"
+        android:layout_width="239dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -20,16 +20,19 @@
         android:textAlignment="center"
         android:textColor="#F09A3D"
         android:textSize="40sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.062" />
 
     <TextView
         android:id="@+id/storyText"
         android:layout_width="324dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="5dp"
         android:fontFamily="@font/nasalization"
         android:textAlignment="center"
@@ -46,13 +49,10 @@
         android:id="@+id/planetGif"
         android:layout_width="320dp"
         android:layout_height="202dp"
-        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="48dp"
         android:src="@drawable/spaceship"
         app:layout_constraintBottom_toTopOf="@id/startQuiz"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/storyText"
         tools:src="@drawable/spaceship" />
@@ -61,12 +61,15 @@
         android:id="@+id/startQuiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginBottom="51dp"
         android:background="#E68730"
         android:fontFamily="@font/nasalization"
-        android:text="Accept Mission"
+        android:text="  Accept Mission  "
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/planetGif" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

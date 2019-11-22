@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -32,163 +32,185 @@
         android:layout_marginTop="10dp"
         android:scaleType="centerInside"
         android:src="@drawable/astro"
-        tools:src="@drawable/astro" />
+        tools:src="@drawable/astro"
+        app:layout_constraintTop_toBottomOf="@id/solartitle"/>
 
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="Name:"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="440dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spaceGif">
 
-    <TextView
-        android:id="@+id/solarEnglishName"
-        android:layout_width="350dp"
-        android:layout_height="38dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="0dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="TextView"
-        android:textColor="@color/colorPrimary"
-        android:textSize="19sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/textView13"
-        app:layout_constraintTop_toTopOf="@id/textView13" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="0dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="Escape Velocity in ms-1:"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintTop_toBottomOf="@id/solarEnglishName" />
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorPrimaryDark"
+                android:fontFamily="@font/nasalization"
 
-    <TextView
-        android:id="@+id/solarMassExponent"
-        android:layout_width="350dp"
-        android:layout_height="38dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="0dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="TextView"
-        android:textColor="@color/colorPrimary"
-        android:textSize="19sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/textView14"
-        app:layout_constraintTop_toTopOf="parent" />
+                android:text="Name:"
+                android:textSize="20sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="0dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="Surface gravity in m.s^-2"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintTop_toBottomOf="@id/solarMassExponent" />
+            <TextView
+                android:id="@+id/solarEnglishName"
+                android:layout_width="350dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/colorPrimaryDark"
+                android:text="TextView"
+                android:textColor="@color/colorPrimary"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView13"
+                app:layout_constraintTop_toTopOf="@id/textView13" />
 
-    <TextView
-        android:id="@+id/solarGravity"
-        android:layout_width="350dp"
-        android:layout_height="38dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="0dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="TextView"
-        android:textColor="@color/colorPrimary"
-        android:textSize="19sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/textView16"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/colorPrimaryDark"
+                android:fontFamily="@font/nasalization"
+                android:text="Escape Velocity in ms-1:"
+                android:textSize="20sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintTop_toBottomOf="@id/solarEnglishName" />
 
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="0dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="Equatorial radius in kilometres:"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintTop_toBottomOf="@id/solarGravity" />
+            <TextView
+                android:id="@+id/solarMassExponent"
+                android:layout_width="350dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/colorPrimaryDark"
+                android:text="TextView"
+                android:textColor="@color/colorPrimary"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView14"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/solarEquaRadius"
-        android:layout_width="350dp"
-        android:layout_height="38dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="0dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="TextView"
-        android:textColor="@color/colorPrimary"
-        android:textSize="19sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/textView17"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/colorPrimaryDark"
+                android:fontFamily="@font/nasalization"
+                android:text="Surface gravity in m.s^-2"
+                android:textSize="20sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintTop_toBottomOf="@id/solarMassExponent" />
 
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="0dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="Discovered By:"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintTop_toBottomOf="@id/solarEquaRadius" />
+            <TextView
+                android:id="@+id/solarGravity"
+                android:layout_width="350dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/colorPrimaryDark"
+                android:text="TextView"
+                android:textColor="@color/colorPrimary"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView16"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/solarDiscoveredBy"
-        android:layout_width="350dp"
-        android:layout_height="38dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="0dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="Unknown"
-        android:textColor="@color/colorPrimary"
-        android:textSize="19sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/textView18"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/colorPrimaryDark"
+                android:fontFamily="@font/nasalization"
+                android:text="Equatorial radius in kilometres:"
+                android:textSize="20sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintTop_toBottomOf="@id/solarGravity" />
 
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="0dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="Discovery Date:"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintTop_toBottomOf="@id/solarDiscoveredBy" />
+            <TextView
+                android:id="@+id/solarEquaRadius"
+                android:layout_width="350dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/colorPrimaryDark"
+                android:text="TextView"
+                android:textColor="@color/colorPrimary"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView17"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/solarDiscoveryDate"
-        android:layout_width="350dp"
-        android:layout_height="38dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="0dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="Unknown"
-        android:textColor="@color/colorPrimary"
-        android:textSize="19sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView19"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/colorPrimaryDark"
+                android:fontFamily="@font/nasalization"
+                android:text="Discovered By:"
+                android:textSize="20sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintTop_toBottomOf="@id/solarEquaRadius" />
 
-</LinearLayout>
+            <TextView
+                android:id="@+id/solarDiscoveredBy"
+                android:layout_width="350dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/colorPrimaryDark"
+                android:text="Unknown"
+                android:textColor="@color/colorPrimary"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView18"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/colorPrimaryDark"
+                android:fontFamily="@font/nasalization"
+                android:text="Discovery Date:"
+                android:textSize="20sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintTop_toBottomOf="@id/solarDiscoveredBy" />
+
+            <TextView
+                android:id="@+id/solarDiscoveryDate"
+                android:layout_width="350dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/colorPrimaryDark"
+                android:text="Unknown"
+                android:textColor="@color/colorPrimary"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView19"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
