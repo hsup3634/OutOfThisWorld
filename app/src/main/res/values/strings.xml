@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name"></string>
+    <string name="app_name">StudySpace</string>
     <string name ="Title">StudySpace</string>
     <string name="clickanywhere">Click anywhere to begin!</string>
     <string name="quiztitle">Quiz</string>
@@ -54,9 +54,8 @@
 
 
     <string name="next_fun_fact">Next Fun Fact!</string>
-    <string name="ants_stretch_when_they_wake_up_in_the_morning">Ants stretch when they wake up in the morning.</string>
     <string name="did_you_know">Did you know?</string>
-    <string name="CelestialBodiesInstructions">Welcome to the Celestial Bodies Page! Type in a celestial body and click the search bar to learn more about it! E.g. Pluto </string>
+    <string name="CelestialBodiesInstructions">Welcome to the Celestial Bodies Page! Type in a celestial body and click the search bar to learn more about it! E.g. Europa </string>
     <string name="CelestialBodyInfo">Celestial Body Info</string>
 
 </resources>

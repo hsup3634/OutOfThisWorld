@@ -15,7 +15,7 @@
         android:fontFamily="@font/nasalization"
         android:textAlignment="center"
         android:textColor="#F09A3D"
-        android:textSize="40sp"
+        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintLeft_toLeftOf="parent"

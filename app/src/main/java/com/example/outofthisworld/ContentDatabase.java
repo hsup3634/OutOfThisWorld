@@ -22,7 +22,7 @@ class ContentDatabase {
     // store data for content_detail.xml page - has all the topic content
     static {
         topics.put(1, new ContentDetail(
-                1, "The Basics of Astronomy", "Content:\n" +
+                1, "The Basics of Astronomy",
                 "\n" +
                 "Astronomy is the scientific study of celestial objects — e.g. Planets, Stars, Galaxies, and the Universe as a whole.\n" +
                 "It encompasses the study of everything outside the Earth's atmosphere.\n" +
