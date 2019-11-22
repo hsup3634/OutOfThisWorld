@@ -19,6 +19,8 @@ public class SolarSystemDetail extends AppCompatActivity {
     private TextView equaRadiusTV;
     private TextView discoveredByTV;
     private TextView discoveryDateTV;
+    private TextView isPlanetTV;
+    private TextView solarTitle;
     ArrayList<SolarSystem> solarArray;
     private RecyclerView rv_solartopics;
     private View view;
@@ -50,6 +52,7 @@ public class SolarSystemDetail extends AppCompatActivity {
         double equaRadius = intent.getDoubleExtra("equaRadius", 0);
         String discoveredBy = intent.getStringExtra("discoveredBy");
         String discoveryDate = intent.getStringExtra("discoveryDate");
+        boolean isPlanet = intent.getBooleanExtra("isPlanet", true);
 
 
         englishNameTV = findViewById(R.id.solarEnglishName);
@@ -58,6 +61,9 @@ public class SolarSystemDetail extends AppCompatActivity {
         equaRadiusTV = findViewById(R.id.solarEquaRadius);
         discoveredByTV = findViewById(R.id.solarDiscoveredBy);
         discoveryDateTV = findViewById(R.id.solarDiscoveryDate);
+        isPlanetTV = findViewById(R.id.solarIsPlanet);
+        solarTitle = findViewById(R.id.solartitle);
+
 
         //setting the UI elements to hold the API data
         englishNameTV.setText(englishName);
@@ -66,10 +72,24 @@ public class SolarSystemDetail extends AppCompatActivity {
         equaRadiusTV.setText(String.valueOf(equaRadius));
         discoveredByTV.setText(discoveredBy);
         discoveryDateTV.setText(discoveryDate);
+        solarTitle.setText(englishName);
+        isPlanetTV.setText(String.valueOf(isPlanet));
+
+        if (String.valueOf(isPlanet).contains("true")) {
+            isPlanetTV.setText("Yes");
+        } else if (String.valueOf(isPlanet).contains("false")) {
+            isPlanetTV.setText("No");
+        }
+
+        if (String.valueOf(discoveredBy).equals("")) {
+            discoveredByTV.setText("Not available");
+        }
+        if (String.valueOf(discoveryDate).equals("")) {
+            discoveryDateTV.setText("Not available");
 
 
+        }
     }
-
 
 }
 

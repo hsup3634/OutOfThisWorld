@@ -17,6 +17,8 @@ public class SolarSystem {
     private double equaRadius;
     private String discoveredBy;
     private String discoveryDate;
+    private boolean isPlanet;
+
     public int num_results;
 
     //constructor for the variables
@@ -29,6 +31,7 @@ public class SolarSystem {
         this.equaRadius = equaRadius;
         this.discoveredBy = discoveredBy;
         this.discoveryDate = discoveryDate;
+        this.isPlanet=isPlanet;
         this.escape = escape;
 
     }
@@ -40,6 +43,13 @@ public class SolarSystem {
 
     public void setEscape(double escape) {
         this.escape = escape;
+    }
+
+    public boolean getIsPlanet() {
+        return isPlanet;
+    }
+    public void setIsPlanet(boolean isPlanet) {
+        this.isPlanet=isPlanet;
     }
 
     public String getId() {

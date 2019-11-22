@@ -13,7 +13,7 @@ public class HomeLanding extends AppCompatActivity {
     Button funfacts;
     Button videos;
     Button quiz;
-    Button apibutton;
+    Button celestial;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,7 @@ public class HomeLanding extends AppCompatActivity {
         funfacts = findViewById(R.id.funfacts);
         videos = findViewById(R.id.videos);
         quiz = findViewById(R.id.quiz);
-        apibutton = findViewById(R.id.apibutton);
+        celestial = findViewById(R.id.celestial);
 
         Intent intent = getIntent();
         Intent homeIntent = getIntent();
@@ -70,7 +70,7 @@ public class HomeLanding extends AppCompatActivity {
         });
 
         //Celestial Bodies button
-        apibutton.setOnClickListener(new View.OnClickListener() {
+        celestial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intentapi = new Intent(HomeLanding.this, SolarSystemLanding.class);

@@ -60,7 +60,7 @@ public class Content extends AppCompatActivity {
         buttonFlash.setDuration(200);
         buttonFlash.setStartOffset(5);
         buttonFlash.setRepeatMode(Animation.ABSOLUTE);
-        buttonFlash.setRepeatCount(10);
+        buttonFlash.setRepeatCount(4);
         gameButton.startAnimation(buttonFlash);
 
 

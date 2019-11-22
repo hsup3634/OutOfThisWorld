@@ -61,6 +61,7 @@ public class SolarSystemAdapter extends RecyclerView.Adapter<SolarSystemAdapter.
                 intent.putExtra("equaRadius", solarSystemAtPosition.getEquaRadius());
                 intent.putExtra("discoveredBy", solarSystemAtPosition.getDiscoveredBy());
                 intent.putExtra("discoveryDate", solarSystemAtPosition.getDiscoveryDate());
+                intent.putExtra("isPlanet", solarSystemAtPosition.getIsPlanet());
 
 
                 context.startActivity(intent);
