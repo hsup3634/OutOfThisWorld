@@ -52,28 +52,28 @@ class ContentDatabase {
         ));
 
         topics.put(2, new ContentDetail(
-                2, "Newton and Gravitation", "•\tThe final stage of understanding the structure of the Solar system came from Isaac Newton (1642 - 1726) and his account of gravitation - his Universal Law of Gravitation. It was described in his book the Philosophiae Naturalis Principia Mathematica, usually just known as the Principia, published in 1687.\n" +
-                "•\tNewton showed that the elliptical orbits that Kepler had found were exactly what was expected if the planets were attracted to the Sun by a universal force of gravitation that acts between any two objects in the universe and depends on their mass.\n" +
-                "•\tIn particular, he realised that the force that explains the orbits of, for example, the Moon around the Earth, is the same force that causes objects to fall to the ground and causes the phenomenon of weight.\n" +
+                2, "Newton and Gravitation", "•\tThe final stage of understanding the structure of the Solar system came from Isaac Newton (1642 - 1726) and his account of gravitation - his Universal Law of Gravitation. It was described in his book the Philosophiae Naturalis Principia Mathematica, usually just known as the Principia, published in 1687.\n"+ "\n" +
+                "•\tNewton showed that the elliptical orbits that Kepler had found were exactly what was expected if the planets were attracted to the Sun by a universal force of gravitation that acts between any two objects in the universe and depends on their mass.\n" + "\n" +
+                "•\tIn particular, he realised that the force that explains the orbits of, for example, the Moon around the Earth, is the same force that causes objects to fall to the ground and causes the phenomenon of weight.\n" + "\n" +
                 "•\tHe drew the picture above showing that if an object, such as a cannonball, were fired with sufficient speed from a high mountaintop, it would not fall to Earth, because the curvature of the Earth would fall away at the same rate as the cannonball would fall, and thus it would complete an orbit of the Earth.\n",
                 R.drawable.topic2
         ));
 
         topics.put(3, new ContentDetail(
-                3, "Stellar Parallax", "Once the Solar System was understood, astronomers could turn their attention to more distant objects. Indeed, one of the objections that had been proposed to the Copernican theory was that we should expect the motion of the Earth to change the apparent positions of stars. A nearby star should change its position relative to the background of more distant stars as the orbit of the Earth moved it around the Sun. This effect is known as stellar parallax. If it could be detected, then it would provide a way of measuring the distances of stars.\n" +
+                3, "Stellar Parallax", "Once the Solar System was understood, astronomers could turn their attention to more distant objects. Indeed, one of the objections that had been proposed to the Copernican theory was that we should expect the motion of the Earth to change the apparent positions of stars.\n"+ "\n" + "A nearby star should change its position relative to the background of more distant stars as the orbit of the Earth moved it around the Sun. This effect is known as stellar parallax. If it could be detected, then it would provide a way of measuring the distances of stars.\n" +
                 "\n" +
                 "The failure to observe such parallax was used as an argument against the Copernican theory.\n" +
-                "However, the reason it could not be measured was mostly because the stars are so distant, that the parallax movement is extremely small. In fact, it is less than one second of arc for even the nearest stars, and could not be measured until techniques for the accurate measurement of star positions reached the requisite precision.\n" +
-                "The first successful measurement of stellar parallax was made in 1838 by Friedrich Bessel. He measured the parallax of the star 61 Cygni and obtained a distance of 9.8 light years.\n" +
-                "Other measurements of stellar parallax rapidly followed, and Alpha Centauri was found to be the closest star system to our own Sun at a distance of about 4.3 light years.\n" +
+                "However, the reason it could not be measured was mostly because the stars are so distant, that the parallax movement is extremely small. In fact, it is less than one second of arc for even the nearest stars, and could not be measured until techniques for the accurate measurement of star positions reached the requisite precision.\n" + "\n" +
+                "The first successful measurement of stellar parallax was made in 1838 by Friedrich Bessel. He measured the parallax of the star 61 Cygni and obtained a distance of 9.8 light years.\n" + "\n" +
+                "Other measurements of stellar parallax rapidly followed, and Alpha Centauri was found to be the closest star system to our own Sun at a distance of about 4.3 light years.\n" + "\n" +
                 "These measurements helped confirm not only that the Earth really does orbit around the Sun, but also what had long been expected - that the stars were other suns. The distances measured were consistent with stars being objects as bright as the Sun but seen from much greater distances.\n",
                 R.drawable.topic3
         ));
 
         topics.put(4, new ContentDetail(
-                4, "Milky Way Galaxy", "•\tThis meant that not only was the Earth no longer at the centre of the universe, but even the Sun itself was just one of billions of stars making up our Milky Way galaxy.\n" +
-                "•\tWith the naked eye we can only see at best a few thousand stars, but even with Galileo's telescope revealed that the Milky way was made up of many stars. As telescopes became more powerful, we realised that the number of stars in our Milky Way galaxy was in the billions. In fact it is now thought there are several hundred billions of stars in the Milky Way. The Milky Way has a diameter of about 100000 light years.\n" +
-                "•\tIn the early 20th century, astronomers began to realise that our Milky Way galaxy was itself just one among many. They found that objects that had been called spiral nebulae, were not actually nebulae (clouds of gas), but were other galaxies comparable to our own.\n" +
+                4, "Milky Way\n Galaxy", "•\tThis meant that not only was the Earth no longer at the centre of the universe, but even the Sun itself was just one of billions of stars making up our Milky Way galaxy.\n" + "\n" +
+                "•\tWith the naked eye we can only see at best a few thousand stars, but even with Galileo's telescope revealed that the Milky way was made up of many stars. As telescopes became more powerful, we realised that the number of stars in our Milky Way galaxy was in the billions. In fact it is now thought there are several hundred billions of stars in the Milky Way. The Milky Way has a diameter of about 100000 light years.\n" + "\n" +
+                "•\tIn the early 20th century, astronomers began to realise that our Milky Way galaxy was itself just one among many. They found that objects that had been called spiral nebulae, were not actually nebulae (clouds of gas), but were other galaxies comparable to our own.\n" + "\n" +
                 "•\tOne of the nearest and best-known galaxies is M31 in Andromeda shown below, and observations by Edwin Hubble showed that galaxies like this really were systems of billions of stars just like our own Milky way galaxy.\n",
                 R.drawable.topic4
         ));
@@ -82,7 +82,7 @@ class ContentDatabase {
                 5, "Scale of The Universe", "Starting with the Solar system, the distance from the Earth to the Sun is about 150 million kilometres and is called an astronomical unit (AU).\n" +
                 "\n" +
                 "If we go out to the orbit of the outermost planet Neptune, we are now getting out 4,500 million km. It takes light (travelling at a speed of 300,000 km/s) about 8 minutes 20 seconds to get from the Sun to the Earth, and 4 hours to get from the Earth out to the orbit of Neptune.\n" +
-                "You can see that even within our own solar system distances are enormous numbers of km. Hence a unit we use to measure distances in astronomy is the light year.\n" +
+                "You can see that even within our own solar system distances are enormous numbers of km. Hence a unit we use to measure distances in astronomy is the light year.\n" + "\n" +
                 "•\tA light year is a measure of distance — not time.\n" +
                 "•\tIt is the distance light travels in one year.\n" +
                 "•\tThe speed of light is 300,000 km per second (km/s).\n" +
@@ -113,19 +113,19 @@ class ContentDatabase {
                 "Number of planets with life = Number of habitable planets x Probability of life's origin\n" +
                 "•\tThe number of habitable planets we don’t know for sure, but we think it’s probably a big number \n" +
                 "\n" +
-                "To better understand the probability of life, we need to have a better understanding of these 2 numbers.\n" +
+                "To better understand the probability of life, we need to have a better understanding of these 2 numbers.\n" + "\n" +
                 "•\tFor the number of habitable planets, we need to understand planets:\n" +
-                "o\twe need to understand how they formed,\n" +
-                "o\twhether they are likely to be habitable,\n" +
-                "o\tand how they evolve.\n" +
+                "    o\t  we need to understand how they formed,\n" +
+                "    o\t  whether they are likely to be habitable,\n" +
+                "    o\t  and how they evolve.\n" +
                 "•\tThis involves the sciences of:\n" +
-                "o\tastronomy,\n" +
-                "o\tplanetary science,\n" +
-                "o\tand geology.\n" +
+                "    o\t  astronomy,\n" +
+                "    o\t  planetary science,\n" +
+                "    o\t  and geology.\n" +
                 "•\tBut in order to get the probability of life's origin we need to understand life:\n" +
-                "o\tWe need to understand how life works,\n" +
-                "o\thow it originates,\n" +
-                "o\tand how it evolves.\n" +
+                "    o\t  We need to understand how life works,\n" +
+                "    o\t  how it originates,\n" +
+                "    o\t  and how it evolves.\n" + "\n" +
                 "Life on Earth \n" +
                 "\n" +
                 "•\tWe think that life has existed for about 3.5 billion years, at least in the form of microbial life- bacteria and similar things\n" +
